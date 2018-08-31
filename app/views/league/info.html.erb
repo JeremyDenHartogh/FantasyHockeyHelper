@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body>
+    <div class="header">
+        <a href="/">
+            <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH.png">
+        </a>
+    </div>
+    <div class="links">
+        <a href="/">Home</a>
+    </div>
+
+    <div class="page">
+        <h2> League Name: <%= @info['name'] %></h2>
+        <p> League Key: <%= @info['league_key'] %></p>
+        <p> Scoring Type: <%= @info['scoring_type'] %></p>
+        <p> Number of Teams: <%= @info['num_teams'] %></p>
+
+        <h3>Roster Positions:</h3>
+        <table>
+          <tr>
+            <th>Position</th>
+            <th>Spots</th>
+          </tr>
+          <% for pos in @roster_positions do%>
+            <tr>
+              <td><%= pos['position'] %></td>
+              <td><%= pos['count'] %></td>
+            </tr>
+          <% end %>
+        </table>
+        <h3>Stat Categories: </h3>
+        <% for cat in @stat_categories do%>
+          <%= cat['name'] %><br>
+        <% end %>
+    </div>
+
+  </body>
+</html>

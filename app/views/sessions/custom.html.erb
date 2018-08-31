@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body>
+    <div class="header">
+        <a href="/">
+            <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH.png">
+        </a>
+    </div>
+    <div class="links">
+        <a href="/">Home</a>
+    </div>
+
+    <div class="page">
+        <h2> Welecome <%= @user.info.nickname %></h2>
+        Input your League ID into the box below.<br>
+        It can be found in the url of your leagues home page on yahoo.<br>
+        <form action="/leagueinfo" method="GET" class="homeForm">
+            <label> League ID: <br> <input type="text" class="league" name="leagueid"> </label> <br>
+            <input type="hidden" name="token" value="<%= @user.credentials.token %>">
+            <input type="submit" value="Get League Info" class="submitButton">
+        </form>
+    </div>
+
+  </body>
+</html>

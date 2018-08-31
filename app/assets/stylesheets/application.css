@@ -1,0 +1,170 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  font: 30px 'Roboto','Helvetica','Arial','sans-serif';
+  margin: 0;
+  background-color: #bbb;
+  text-align: center;
+}
+
+a, .aClone{
+  color: #00B7FF;
+  background-color: white;
+  cursor: pointer;
+}
+
+p {
+  font: 30px 'Roboto','Helvetica','Arial','sans-serif';
+  padding: 0px;
+  margin 0px;
+}
+
+.page {
+  margin: 30px 50px;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+
+.homeForm {
+    margin: 30px 50px;
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+
+
+.name{
+  margin: 5px 0px;
+}
+
+.submitButton {
+  background-color: #7B0099;
+  margin: 10px 0px;
+  color: black;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.submitButton:hover {
+  background-color: #380066;
+  color: #FFF;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.header {
+  overflow: hidden;
+  background-color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.links {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: #7B0099;
+}
+
+.aLinks{
+  display: inline;
+}
+
+.links a, .links .aClone {
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 12px;
+  font-size: 24px;
+  line-height: 25px;
+  border-radius: 4px;
+  border: none;
+  color: #222;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: center;
+}
+
+
+.links a:hover, .links .aClone:hover {
+  background-color: #ddd;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (max-width: 500px) {
+  .links a, .links .streams .aClone {
+    float: none;
+    display: block;
+    text-align: left;
+    background-color: #444;
+    color: white;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+.active {
+  background-color: #123a00;
+}
+
+.logo {
+    max-width: 300px;
+}
+
+table{
+  border-collapse: collapse;
+  border:  1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px 24px;
+    border-left: 1px solid black;
+    font-size: 24px;
+}
+
+tr{
+  height: 30px;
+}
+
+tr:nth-child(even){background-color: #eee}
+
+tr:hover {background-color: #9D66BB;}
+
+th {
+    background-color: #7B0099;
+    color: white;
+}
