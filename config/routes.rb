@@ -4,6 +4,23 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root 'landing#index'
     get 'leagueinfo', to: 'league#info'
-    
-    
+    get 'freeagents', to: 'freeagents#allFA'
+    get 'freeagentsC', to: 'freeagents#center'
+    get 'freeagentsD', to: 'freeagents#defence'
+    get 'freeagentsLW', to: 'freeagents#leftwing'
+    get 'freeagentsRW', to: 'freeagents#rightwing'
+    get 'freeagentsG', to: 'freeagents#goalie'
+    get 'freeagentsF', to: 'freeagents#forward'
+    get 'freeagentsS', to: 'freeagents#skater'
+    get 'login', to: 'landing#login'
+    get 'standings', to: 'league#standings'
+    get 'draft', to: 'draft#rankings'
+    get 'draftC', to: 'draft#center'
+    get 'draftD', to: 'draft#defence'
+    get 'draftLW', to: 'draft#leftwing'
+    get 'draftRW', to: 'draft#rightwing'
+    get 'draftG', to: 'draft#goalie'
+    get 'draftF', to: 'draft#forward'
+    get 'draftS', to: 'draft#skater'
+    get 'roster', to: 'league#roster'
 end

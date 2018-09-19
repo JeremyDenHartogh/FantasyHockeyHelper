@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
+    <%= javascript_include_tag "table" %>
+  </head>
+  <body onload='indexCheck()'>
+    <%= render 'shared/header' %>
+    <div class="page">
+      <% if @info %>
+        <h2> League Name: <%= @info['name'] %></h2>
+        <p> Number of Teams: <%= @info['num_teams'] %></p>
+        <h3>Standings:</h3>
+        <table>
+          <tr>
+            <th class="data" onclick="sort_table(0")>Rank</th>
+            <th class="data" onclick="sort_table(1)">Name</th>
+            <th class="data" onclick="sort_table(2)">Wins</th>
+            <th class="data" onclick="sort_table(3)">Losses</th>
+            <th class="data" onclick="sort_table(4)">Ties</th>
+          </tr>
+          <% for team in @standings do%>
+            <tr>
+              <td class="tableData"><%= team['team_standings']['rank'] %></td>
+              <td class="tableData"> <form action="/roster" method="GET">
+                <input type="hidden" name="leagueid" value="" class="rsubmitID">
+                <input type="hidden" name="token" value="" class='rToken'>
+                <input type="hidden" name="team" value="<%= team['team_key'] %>">
+                <input type="submit" value="<%= team['name'] %>" class="teamButton" onclick="getRosterInfo();">
+            </form> </td>
+              <td class="tableData"><%= team['team_standings']['outcome_totals']['wins'] %></td>
+              <td class="tableData"><%= team['team_standings']['outcome_totals']['losses'] %></td>
+              <td class="tableData"><%= team['team_standings']['outcome_totals']['ties'] %></td>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+    </div>
+  </body>
+</html>

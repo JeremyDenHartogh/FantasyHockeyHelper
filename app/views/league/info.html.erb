@@ -1,20 +1,13 @@
 <html>
   <head>
     <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
   </head>
-  <body>
-    <div class="header">
-        <a href="/">
-            <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH.png">
-        </a>
-    </div>
-    <div class="links">
-        <a href="/">Home</a>
-    </div>
-
+  <body onload='indexCheck()'>
+    <%= render 'shared/header' %>
     <div class="page">
-        <h2> League Name: <%= @info['name'] %></h2>
-        <p> League Key: <%= @info['league_key'] %></p>
+      <% if @info %>
+        <h2><%= @info['name'] %></h2>
         <p> Scoring Type: <%= @info['scoring_type'] %></p>
         <p> Number of Teams: <%= @info['num_teams'] %></p>
 
@@ -35,6 +28,7 @@
         <% for cat in @stat_categories do%>
           <%= cat['name'] %><br>
         <% end %>
+      <% end %>
     </div>
 
   </body>

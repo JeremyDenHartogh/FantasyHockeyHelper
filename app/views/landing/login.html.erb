@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
+  </head>
+  <body onload="checkLogin()">
+    <div class="header">
+        <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH.png">
+    </div>
+    <div class="links">
+        <form action="/login" method="GET" class="aLinks">
+          <input type="submit" value="Login Page" class="aClone">
+        </form>
+    </div>
+
+    <div class="page">
+        <h2> Welecome to the Fantasy Hockey Helper</h2>
+        Sign into your Yahoo account by clicking the Login button below!
+        <form action="/auth/yahoo_auth" method="GET" class="homeForm">
+            <input type="submit" value="Login" class="submitButton">
+        </form>
+    </div>
+
+  </body>
+</html>

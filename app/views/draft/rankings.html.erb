@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
+    <%= javascript_include_tag "table" %>
+  </head>
+  <body onload='indexCheck()'>
+    <div class="wrapper" style="display: inline-block; min-width: 100%;">
+      <%= render 'shared/header' %>
+      <div class="page">
+          <h3>Rankings - <%= @list %></h3>
+          <%= render 'shared/rankingheader' %>
+          <table>
+            <tr>
+              <% for cat in @projections.headers do%>
+                <th class="data" onclick="sort_table(<%= @count %>)" ><%= cat %> </th>
+                <% @count = @count + 1 %>
+              <% end %>
+            </tr>
+            <tbody id="rankings">
+              <% for row in @projections do%>
+                <tr>
+                <% for item in row do%>
+                  <% input = item[1] %>
+                  <% isFloat = input.to_f.to_s == item[1]%>
+                  <% if (isFloat) %>
+                  <%   item[1] = item[1].to_f.round(3) %>
+                  <% end %>
+                  <td class="tableData"><%= item[1] %></td>
+                <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </body>
+</html>

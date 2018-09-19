@@ -1,0 +1,12 @@
+<%= javascript_include_tag "cookies" %>
+<form action="/draft" method="GET" class="homeForm" id="positions">
+    <input type="submit" value="All Players"  class="submitButton" onclick="setDPosition('');">
+    <input type="submit" value="Skaters"  class="submitButton" onclick="setDPosition('S');">
+    <input type="submit" value="Goalies"  class="submitButton" onclick="setDPosition('G');">
+    <input type="submit" value="Forwards"  class="submitButton" onclick="setDPosition('F');">
+    <input type="submit" value="Centers"  class="submitButton" onclick="setDPosition('C');">
+    <input type="submit" value="Left Wing"  class="submitButton" onclick="setDPosition('LW');">
+    <input type="submit" value="Right Wing"  class="submitButton" onclick="setDPosition('RW');">
+    <input type="submit" value="Defensemen"  class="submitButton" onclick="setDPosition('D');">
+</form>
+        

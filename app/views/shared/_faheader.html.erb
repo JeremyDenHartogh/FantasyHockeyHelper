@@ -1,0 +1,14 @@
+<%= javascript_include_tag "cookies" %>
+<form action="/freeagents" method="GET" class="homeForm" id="positions">
+    <input type="hidden" name="leagueid" value="" id="fsubmitID">
+    <input type="hidden" name="token" value="" id='fToken'>
+    <input type="submit" value="All Players"  class="submitButton" onclick="getFreeAgentInfo2();">
+    <input type="submit" value="Skaters"  class="submitButton" onclick="setPosition('S');">
+    <input type="submit" value="Goalies"  class="submitButton" onclick="setPosition('G');">
+    <input type="submit" value="Forwards"  class="submitButton" onclick="setPosition('F');">
+    <input type="submit" value="Centers"  class="submitButton" onclick="setPosition('C');">
+    <input type="submit" value="Left Wing"  class="submitButton" onclick="setPosition('LW');">
+    <input type="submit" value="Right Wing"  class="submitButton" onclick="setPosition('RW');">
+    <input type="submit" value="Defensemen"  class="submitButton" onclick="setPosition('D');">
+</form>
+        

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
+    <%= javascript_include_tag "table" %>
+  </head>
+  <body onload='indexCheck()'>
+    <div class="wrapper" style="display: inline-block; min-width: 100%;">
+      <%= render 'shared/header' %>
+      <div class="page">
+        <% if @info %>
+          <h2> League Name: <%= @info['name'] %></h2>
+          <h3>Free Agents - <%= @list %></h3>
+          <%= render 'shared/faheader' %>
+          <table>
+            <tr>
+              <th class="data" onclick="sort_table(0)">Rank</th>
+              <th class="data" onclick="sort_table(1)">First Name</th>
+              <th class="data" onclick="sort_table(2)">Last Name</th>
+              <th class="data" onclick="sort_table(3)">Team</th>
+              <th class="data" onclick="sort_table(4)">Position</th>
+              <% if @position && @position != 'G' %>
+                <th class="data" onclick="sort_table(5)">Goals</th>
+                <th class="data" onclick="sort_table(6)">Assists</th>
+                <th class="data" onclick="sort_table(7)">Plus/Minus</th>
+                <th class="data" onclick="sort_table(8)">Shots</th>
+                <th class="data" onclick="sort_table(9)">Powerplay Points</th>
+                <th class="data" onclick="sort_table(10)">Hits</th>   
+              <% elsif @position == 'G' %>
+                <th class="data" onclick="sort_table(5)">Wins</th>
+                <th class="data" onclick="sort_table(6)">Save Percentage</th>
+                <th class="data" onclick="sort_table(7)">Goals Against Average</th>
+                <th class="data" onclick="sort_table(8)">Shutouts</th>
+              <% end %>
+            </tr>
+            <tbody id="rankings">
+              <% if @position%>
+                <% for player in @players do%>
+                  <tr>
+                    <td class="tableData"><%= @count %></td>
+                    <td class="tableData"><%= player[0]['name']['first'] %></td>
+                    <td class="tableData"><%= player[0]['name']['last'] %></td>
+                    <td class="tableData"><%= player[0]['editorial_team_full_name'] %></td>
+                    <td class="tableData"><%= player[0]['display_position'] %></td>
+                    <% if @position != 'G' %>
+                      <td class="tableData"><%= player[1]['G'] %></td>
+                      <td class="tableData"><%= player[1]['A'] %></td>
+                      <td class="tableData"><%= player[1]['+/-'] %></td>
+                      <td class="tableData"><%= player[1]['SOG'] %></td>
+                      <td class="tableData"><%= player[1]['PPP'] %></td>
+                      <td class="tableData"><%= player[1]['HITS'] %></td>
+                    <% else %>
+                      <td class="tableData"><%= player[1]['W'] %></td>
+                      <td class="tableData"><%= player[1]['SV%'].to_f.round(3) %></td>
+                      <td class="tableData"><%= player[1]['GAA'].to_f.round(3) %></td>
+                      <td class="tableData"><%= player[1]['SO'] %></td>
+                    <% end %>
+                  </tr>
+                  <% @count = @count + 1 %>
+                <% end %>
+              <% else %>
+                <% for player in @freeagents do%>
+                  <tr>
+                    <td class="tableData"><%= @count %></td>
+                    <td class="tableData"><%= player['name']['first'] %></td>
+                    <td class="tableData"><%= player['name']['last'] %></td>
+                    <td class="tableData"><%= player['editorial_team_full_name'] %></td>
+                    <td class="tableData"><%= player['display_position'] %></td>
+                  </tr>
+                  <% @count = @count + 1 %>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>

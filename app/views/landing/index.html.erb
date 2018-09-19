@@ -1,22 +1,18 @@
 <html>
   <head>
     <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
   </head>
-  <body>
-    <div class="header">
-        <a href="/">
-            <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH.png">
-        </a>
-    </div>
-    <div class="links">
-        <a href="/">Home</a>
-    </div>
-
+  <body onload='indexCheck()'>
+    <%= render 'shared/header' %>
     <div class="page">
-        <h2> Welecome to the Fantasy Hockey Helper</h2>
-        Sign into your Yahoo account by clicking the Login button below!
-        <form action="/auth/yahoo_auth" method="GET" class="homeForm">
-            <input type="submit" value="Login" class="submitButton">
+        <h2 id="nickname"> Welcome </h2>
+        Input your League ID into the box below.<br>
+        It can be found in the url of your leagues home page on yahoo.<br>
+        <form action="/leagueinfo" method="GET" class="homeForm">
+            <label> League ID: <br> <input type="text" class="league" name="leagueid" id="submitID"> </label> <br>
+            <input type="hidden" name="token" value="token" id='token'>
+            <input type="submit" value="Get League Info" class="submitButton" onclick="createCookie('submitid',document.getElementById('submitID').value);">
         </form>
     </div>
 
