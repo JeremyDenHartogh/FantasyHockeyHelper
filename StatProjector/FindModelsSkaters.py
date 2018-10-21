@@ -11,7 +11,7 @@ def getErrorValues(pred,yVal):
 	count = 0
 	diffArray = []
 	for i in range (0,len(pred)):
-		value = pred[i].round().astype(int)
+		value = pred[i]
 		diff = abs(value-yVal[i])
 		diffArray.append(diff)
 		count += diff
@@ -26,6 +26,7 @@ def train_model(X,Y,numTrials,printThreshold):
 	averageMSE = 0
 	averageR2 = 0
 	averageEVS = 0
+	N = 0
 	for i in range (0,numTrials):
 		X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.2, random_state=i*1319)
 		LR.fit(X_train, Y_train)
@@ -36,9 +37,10 @@ def train_model(X,Y,numTrials,printThreshold):
 		averageMSE += mean_squared_error(Y_validation, predictions)
 		averageR2 += r2_score(Y_validation, predictions)
 		averageEVS += explained_variance_score(Y_validation, predictions)
+		N = len(predictions)
 	trials = float(len(meanErrors))
 	R2 = averageR2/trials
-	adjR2 = 1 - (((1 - R2)*(183-1))/(183-p-1))
+	adjR2 = 1 - (((1 - R2)*(N-1))/(N-p-1))
 	if (adjR2 > printThreshold):
 		print ("Average MSE: " + str(averageMSE/trials))
 		print ("Average Variance (R^2): " + str(R2))
@@ -53,75 +55,126 @@ def train_model(X,Y,numTrials,printThreshold):
 	
 def train_goals():
 	print ("Goals:")
-	X = arrayX[:,[3,8,17,21,53,56,84]]
-	Y = arrayY[:,7]
-	train_model(X,Y,2000,0.5)
+	X = arrayX[:,[4,6,10,19,57,61,73,88]]
+	Y = arrayY[:,9]
+	train_model(X,Y,2000,0.59)
 	print (" ")
-		
+	#0.626
+	
 def train_gpg():
 	print ("Goals per Game:")
-	X = arrayX[:,[3,8,17,21,53,65,84]]
-	Y = arrayY[:,8]
+	X = arrayX[:,[4,6,10,26,57,69,82,88]]
+	#X = arrayX[:,[4,6,10,19,57,69,73,88]]
+	Y = arrayY[:,10]
 	train_model(X,Y,2000,0.5)
 	print (" ")
+	#0.657
 
 def train_assists():
-	#indexs = [3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,48,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89]
-	#indexs = [6,7,8,9,10,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,48,51,52,53,54,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89]
-	indexs = [84,85,86]
-	for j in range (0,3):
-		print (indexs[j])
-		X = arrayX[:,[3,11,17,55]]
-		Y = arrayY[:,9]
-		train_model(X,Y,2000,0.61)
+	print ("Assists:")
+	X = arrayX[:,[4,13,19,59,80]]
+	Y = arrayY[:,11]
+	train_model(X,Y,2000,0.5)
+	print (" ")
+	#0.611
+		
+def train_apg():
+	print ("Assists per Game:")
+	#X = arrayX[:,[4,13,59,90,93]]
+	X = arrayX[:,[4,6,13,43,59,93]]
+	Y = arrayY[:,12]
+	train_model(X,Y,2000,0.5)
+	print (" ")
+	#0.642
 	
 def train_powerplaypoints():
-	X = arrayX[:,[0,1,6,7,9,11,13,16,18,20,21,22,39,40,54,61,62,81,83]]
-	Y = arrayY[:,14]
-	X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.10, random_state=200)
-	names = X_validation[:,:2]
-	X_train = X_train[:,2:]
-	X_validation = X_validation[:,2:]
-	LR.fit(X_train, Y_train)
-	predictions = LR.predict(X_validation)
-	print ("PowerplayPoints")
-	getErrorValues(predictions,Y_validation)
+	print ("Powerplay:")
+	X = arrayX[:,[4,14,56,64,66]]
+	Y = arrayY[:,16]
+	train_model(X,Y,2000,0.644)
+	print (" ")
+	#0.645	
+
+def train_pppg():
+	print ("Powerplay Points per Game:")
+	#X = arrayX[:,[4,14,29,64,66]]
+	X = arrayX[:,[4,14,17,29,61,63,73]]
+	Y = arrayY[:,17]
+	train_model(X,Y,2000,0.662)
+	print (" ")
+	#0.663
 	
 def train_plusminus():
-	X = arrayX[:,[0,1,6,7,9,11,13,16,18,20,21,22,39,40,54,61,62,81,83]]
-	Y = arrayY[:,13]
-	X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.10, random_state=200)
-	names = X_validation[:,:2]
-	X_train = X_train[:,2:]
-	X_validation = X_validation[:,2:]
-	LR.fit(X_train, Y_train)
-	predictions = LR.predict(X_validation)
-	print ("PlusMinus")
-	getErrorValues(predictions,Y_validation)
+	print ("Plus/Minus:")
+	#X = arrayX[:,[62,84,92]]
+	X = arrayX[:,[33,37,62,67]]
+	Y = arrayY[:,15]
+	train_model(X,Y,2000,0.049)
+	print (" ")
+	#0.057
 	
 def train_shots():
-	X = arrayX[:,[0,1,6,7,9,11,13,16,18,20,21,22,39,40,54,61,62,81,83]]
-	Y = arrayY[:,16]
-	X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.10, random_state=200)
-	names = X_validation[:,:2]
-	X_train = X_train[:,2:]
-	X_validation = X_validation[:,2:]
-	LR.fit(X_train, Y_train)
-	predictions = LR.predict(X_validation)
-	print ("Shots")
-	getErrorValues(predictions,Y_validation)
+	print ("Shots:")
+	X = arrayX[:,[4,13,20,66]]
+	Y = arrayY[:,19]
+	train_model(X,Y,2000,0.687)
+	print (" ")
+	#0.687
+
+def train_spg():
+	print ("Shots per Game:")
+	X = arrayX[:,[4,6,14,20,26,67]]
+	Y = arrayY[:,20]
+	train_model(X,Y,2000,0.782)
+	print (" ")
+	#0.784
 	
 def train_hits():
-	X = arrayX[:,[0,1,6,7,9,11,13,16,18,20,21,22,39,40,54,61,62,81,83]]
-	Y = arrayY[:,18]
-	X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.10, random_state=200)
-	names = X_validation[:,:2]
-	X_train = X_train[:,2:]
-	X_validation = X_validation[:,2:]
-	LR.fit(X_train, Y_train)
-	predictions = LR.predict(X_validation)
-	print ("Hits")
-	getErrorValues(predictions,Y_validation)
+	print ("Hits:")
+	X = arrayX[:,[21,22,91]]
+	Y = arrayY[:,21]
+	train_model(X,Y,2000,0.65)
+	print (" ")
+	#0.669
+		
+def train_hpg():
+	print ("Hits per Game:")
+	X = arrayX[:,[22,61,69]]
+	Y = arrayY[:,22]
+	train_model(X,Y,2000,0.788)
+	print (" ")
+	#0.791
+		
+def train_blocks():
+	print ("Blocks:")
+	X = arrayX[:,[6,23,25,27,71]]
+	Y = arrayY[:,23]
+	train_model(X,Y,2000,0.753)
+	print (" ")
+	#0.755
+	
+def train_bpg():
+	print ("Blocks per Game:")
+	#X= arrayX[:,[6,24,71,90,91]]
+	X = arrayX[:,[6,24,71,85,91]]
+	Y = arrayY[:,24]
+	train_model(X,Y,2000,0.8718)
+	print (" ")
+	#0.874
+
+def train_AModel():
+	#X = arrayX[:,[4,14,29,64,66]]
+	#0.663
+
+	#indexs = [64,66]
+	#indexs = [4,6,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,51,53,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93]
+	indexs = [39]
+	for j in range (0,len(indexs)):
+		print (indexs[j])
+		X = arrayX[:,[4,14,17,29,61,63,73]]
+		Y = arrayY[:,17]
+		train_model(X,Y,2000,0.662)
+	#0.6629/0.6633
 
 url = "Skaters20132016C.csv"
 ds1316 = pandas.read_csv(url)
@@ -135,9 +188,6 @@ url = "Skaters20162017C.csv"
 ds1617 = pandas.read_csv(url)
 url = "Skaters20172018C.csv"
 ds1718 = pandas.read_csv(url)
-#print (dataset)
-#print(dataset.shape)
-#print(dataset.groupby('Team').size())
 
 # Split-out validation dataset
 array1516 = ds1516.values
@@ -154,9 +204,15 @@ arrayY = np.concatenate((array1617, array1718), axis=0)
 LR = linear_model.LinearRegression()
 #train_goals()
 #train_gpg()
-train_assists()
+#train_assists()
 #train_apg()
 #train_powerplaypoints()
+#train_pppg()
 #train_plusminus()
 #train_shots()
+#train_spg()
 #train_hits()
+train_hpg()
+#train_blocks()
+#train_bpg()
+#train_AModel()
