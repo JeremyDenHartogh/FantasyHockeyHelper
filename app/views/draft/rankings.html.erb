@@ -12,14 +12,19 @@
           <%= render 'shared/rankingheader' %>
           <table>
             <tr>
+              <th class="data" onclick="sort_table(<%= @count %>,'rankings')" >Rank</th>
+              <% @count = @count + 1 %>
               <% for cat in @projections.headers do%>
-                <th class="data" onclick="sort_table(<%= @count %>)" ><%= cat %> </th>
+                <th class="data" onclick="sort_table(<%= @count %>,'rankings')" ><%= cat %> </th>
                 <% @count = @count + 1 %>
               <% end %>
             </tr>
             <tbody id="rankings">
+              <% @count = 1%>
               <% for row in @projections do%>
                 <tr>
+                <td class="tableData"><%= @count %></td>
+                <% @count = @count + 1 %>
                 <% for item in row do%>
                   <% input = item[1] %>
                   <% isFloat = input.to_f.to_s == item[1]%>

@@ -74,9 +74,9 @@ p {
 
 .header {
   overflow: hidden;
-  background-color: white;
   padding: 20px 10px;
   text-align: center;
+  background-color: #bbb;
 }
 
 .links {
@@ -157,7 +157,7 @@ th {
 }
 
 .data {
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   padding: 8px 16px;
 
@@ -170,11 +170,20 @@ th {
 }
 
 .tableData {
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px 16px;
 }
 
+.dateData {
+  font-size: 16px;
+  padding: 8px 16px;
+}
 
+.dropRec {
+  background-color: #7000A2;
+  width:auto;
+  color: white;
+}
 
 .teamButton {
   background:none!important;

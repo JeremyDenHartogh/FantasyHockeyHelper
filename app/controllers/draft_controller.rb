@@ -1,14 +1,14 @@
 class DraftController < ApplicationController
   def rankings
     @list = "All"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/FullProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/FullProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0
   end
 
   def center
     @list = "Center"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/CProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/CProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -16,7 +16,7 @@ class DraftController < ApplicationController
   
   def defence
     @list = "Defence"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/DProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/DProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -24,7 +24,7 @@ class DraftController < ApplicationController
   
   def leftwing
     @list = "Left Wing"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/LWProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/LWProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -32,7 +32,7 @@ class DraftController < ApplicationController
   
   def rightwing
     @list = "Right Wing"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/RWProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/RWProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -40,7 +40,7 @@ class DraftController < ApplicationController
     
   def goalie
     @list = "Goalie"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/GProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/GProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -48,7 +48,7 @@ class DraftController < ApplicationController
   
   def forward
     @list = "Forward"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/FProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/FProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'
@@ -56,7 +56,7 @@ class DraftController < ApplicationController
   
   def skater
     @list = "Skater"
-    csv_text = File.read(Rails.root + 'app/assets/spreadsheets/PProjections.csv')
+    csv_text = File.read(Rails.root + 'StatProjector/PProjections.csv')
     @projections = CSV.parse(csv_text, :headers => true)
     @count = 0    
     render 'rankings'

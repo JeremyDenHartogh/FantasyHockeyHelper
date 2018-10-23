@@ -5,7 +5,7 @@ class FreeagentsController < ApplicationController
       @count = 1
       @freeagents = []
       for i in 0..3 do
-        @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=OR", :authorization => "Bearer #{params[:token]}")
+        @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR", :authorization => "Bearer #{params[:token]}")
         @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
       end
       @info = Hash.from_xml(@response.body)['fantasy_content']['league']
@@ -57,30 +57,104 @@ class FreeagentsController < ApplicationController
     render 'allFA'
   end  
   
+  def full
+    @list = "All"
+    setFreeagents("Full")
+    render 'allFA'
+  end  
+  
   def setFreeagents(position)
     begin
       @position = position
       @count = 1
       @freeagents = []
       @players = []
-      fileName = 'app/assets/spreadsheets/' + position + 'Projections.csv'
+      
+      fileName = 'StatProjector/WeeksData.csv'
+      csv_text = File.read(Rails.root + fileName)
+      weeks = CSV.parse(csv_text, :headers => true)
+    
+      startDate = Date.new(2018, 10, 3)
+      endDate = Date.new(2019, 4, 6)
+      currDate = DateTime.now-(4/24.0) 
+      currDateIndex = ((endDate-startDate).to_i - (endDate-currDate).to_i )
+      currWeek = []
+      for week in weeks
+        currWeek = betweenDates(currDateIndex,week)
+        if currWeek != []
+          break
+        end
+      end
+      
+      fileName = 'StatProjector/Schedule.csv'
+      csv_text = File.read(Rails.root + fileName)
+      @dates = CSV.parse(csv_text, :headers => false)
+      @dates = getRange(currWeek[3].to_i,currWeek[4].to_i,@dates)
+      @datesHeader = @dates[0]
+      
+      fileName = 'StatProjector/' + position + 'Projections.csv'
       csv_text = File.read(Rails.root + fileName)
       @projections = CSV.parse(csv_text, :headers => true)
       for i in 0..1 do
-        @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=OR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+        if position == "Full"
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;", :authorization => "Bearer #{params[:token]}")
+        else
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+        end
         @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
       end
+      @count2 = 0
+      @dropValue = -1
+      @dropRec = ""
       for player in @freeagents do
-        stats = @projections.find {|row| row['Last Name'] == player["name"]["last"]}
+        stats = @projections.find {|row| (row['Last Name'] == player["name"]["last"] && row['First Name'] == player["name"]["first"] && row['Team'] == player["editorial_team_full_name"])}
         if stats 
-          @players.push([player,stats])
+          schedule = @dates.find {|row| row[0] == player["editorial_team_full_name"]}
+          gp = 0
+          isBestPlayer(player,stats)
+          for i in 1..schedule.length-1
+            if schedule[i] != "-"
+             gp += 1
+            end
+          end
+          @players.push([player,stats,schedule,gp])
         else
           puts player
         end
       end
+      @players.sort! {|a, b| b[1]['Value'].to_f <=> a[1]['Value'].to_f}
       @info = Hash.from_xml(@response.body)['fantasy_content']['league']
     rescue
       @response = "ERROR: League ID not Found"
     end
+  end
+end
+
+def betweenDates(index,week)
+  if (index <= week[4].to_i)
+    return week
+  end
+  return []
+end
+
+def getRange(fInd,lInd,datesCSV)
+  returnDates = []
+  for row in datesCSV
+    cutRow = [row[0]]
+    for i in fInd..lInd
+      if row[i] == "0"
+        row[i] = "-"
+      end
+      cutRow.append(row[i])
+    end
+    returnDates.append(cutRow)
+  end
+  return returnDates
+end
+
+def isBestPlayer(player,stats)
+  if stats["Value"].to_f > @dropValue
+    @dropValue = stats["Value"].to_f
+    @dropRec = "#{player["name"]["first"]} #{player["name"]["last"]}"
   end
 end

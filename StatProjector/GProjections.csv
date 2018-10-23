@@ -1,71 +1,71 @@
-First Name,Last Name,Age,Team,Position,Games Played,W,SV%,GAA,SO
-John,Gibson,25,player[13],G,60,32,0.9178,2.4742,4
-Ryan,Miller,38,player[13],G,22,12,0.9199,2.411,1
-Antti,Raanta,29,player[13],G,55,26,0.9252,2.4235,3
-Darcy,Kuemper,28,player[13],G,27,13,0.9104,2.903,2
-Tuukka,Rask,31,player[13],G,59,32,0.9148,2.4538,4
-Jaroslav,Halak,33,player[13],G,23,13,0.9102,2.5862,2
-Carter,Hutton,33,player[13],G,51,23,0.9175,2.6813,3
-Linus,Ullmark,25,player[13],G,31,14,0.9197,2.6098,2
-Mike,Smith,36,player[13],G,57,31,0.9175,2.442,4
-David,Rittich,26,player[13],G,25,13,0.9024,2.889,2
-Scott,Darling,30,player[13],G,34,18,0.9054,2.6677,2
-Petr,Mrazek,26,player[13],G,33,17,0.9110,2.5098,2
-Curtis,McElhinney,35,player[13],G,15,8,0.9170,2.3406,1
-Corey,Crawford,34,player[13],G,50,24,0.9238,2.4155,3
-Cam,Ward,34,player[13],G,21,10,0.9053,3.002,1
-Anton,Forsberg,26,player[13],G,11,5,0.8989,3.2049,1
-Semyon,Varlamov,30,player[13],G,52,25,0.9121,2.8568,3
-Philipp,Grubauer,27,player[13],G,30,15,0.9234,2.4895,2
-Sergei,Bobrovsky,30,player[13],G,63,36,0.9244,2.336,4
-Joonas,Korpisalo,24,player[13],G,19,11,0.9091,2.8088,1
-Ben,Bishop,32,player[13],G,54,26,0.9170,2.4485,3
-Anton,Khudobin,32,player[13],G,28,14,0.9045,2.8173,2
-Jimmy,Howard,34,player[13],G,47,17,0.9103,2.7538,2
-Jonathan,Bernier,30,player[13],G,35,12,0.9110,2.7323,1
-Cam,Talbot,31,player[13],G,65,32,0.9133,2.679,4
-Mikko,Koskinen,30,player[13],G,17,8,0.9116,2.7316,1
-Roberto,Luongo,39,player[13],G,40,20,0.9207,2.5297,2
-Michael,Hutchinson,28,player[13],G,10,5,0.9027,3.1039,1
-James,Reimer,30,player[13],G,32,16,0.9192,2.5775,2
-Jonathan,Quick,32,player[13],G,50,23,0.9189,2.2789,3
-Jack,Campbell,26,player[13],G,24,11,0.9116,2.484,1
-Peter,Budaj,36,player[13],G,8,4,0.9142,2.411,0
-Devan,Dubnyk,32,player[13],G,60,30,0.9211,2.367,4
-Alex,Stalock,31,player[13],G,22,11,0.9025,2.925,1
-Carey,Price,31,player[13],G,55,26,0.9168,2.5376,3
-Antti,Niemi,35,player[13],G,27,13,0.9103,2.7359,2
-Pekka,Rinne,36,player[13],G,55,34,0.9200,2.4,4
-Juuse,Saros,23,player[13],G,27,17,0.9193,2.421,2
-Keith,Kinkaid,29,player[13],G,32,16,0.9096,2.7662,2
-Eddie,Lack,30,player[13],G,6,3,0.8996,3.0722,0
-Cory,Schneider,32,player[13],G,44,21,0.9155,2.5857,3
-Thomas,Greiss,32,player[13],G,34,15,0.9123,2.859,2
-Robin,Lehner,27,player[13],G,48,22,0.9136,2.8166,3
-Henrik,Lundqvist,36,player[13],G,62,26,0.9160,2.6796,3
-Marek,Mazanec,27,player[13],G,20,8,0.9116,2.82,1
-Craig,Anderson,37,player[13],G,55,21,0.9130,2.784,3
-Mike,Condon,28,player[13],G,27,10,0.9067,2.9856,1
-Brian,Elliott,33,player[13],G,49,25,0.9176,2.4473,3
-Michal,Neuvirth,30,player[13],G,26,13,0.9152,2.5186,2
-Calvin,Pickard,26,player[13],G,7,4,0.9116,2.6255,0
-Matt,Murray,24,player[13],G,54,30,0.9158,2.6186,4
-Casey,DeSmith,27,player[13],G,24,13,0.9255,2.317,2
-Tristan,Jarry,23,player[13],G,4,2,0.9021,3.0447,0
-Martin,Jones,28,player[13],G,60,33,0.9110,2.5365,4
-Aaron,Dell,29,player[13],G,22,12,0.9211,2.2487,1
-Jake,Allen,28,player[13],G,55,25,0.9133,2.5403,3
-Chad,Johnson,32,player[13],G,27,13,0.9086,2.678,2
-Andrei,Vasilevskiy,24,player[13],G,64,38,0.9179,2.5205,5
-Louis,Domingue,26,player[13],G,18,11,0.9129,2.674,1
-Frederik,Andersen,29,player[13],G,64,38,0.9155,2.7294,5
-Garret,Sparks,25,player[13],G,18,11,0.9116,2.8553,1
-Jacob,Markstrom,28,player[13],G,54,22,0.9137,2.7789,3
-Anders,Nilsson,28,player[13],G,22,9,0.9122,2.8272,1
-Thatcher,Demko,22,player[13],G,6,2,0.9116,2.8465,0
-Marc-Andre,Fleury,34,player[13],G,58,29,0.9182,2.5113,4
-Malcolm,Subban,25,player[13],G,24,12,0.9063,2.8766,1
-Braden,Holtby,29,player[13],G,61,31,0.9186,2.3932,4
-Pheonix,Copley,26,player[13],G,21,11,0.9116,2.599,1
-Connor,Hellebuyck,25,player[13],G,64,36,0.9185,2.5102,4
-Laurent,Brossoit,25,player[13],G,18,10,0.8979,3.1447,1
+Value,First Name,Last Name,Age,Team,Position,GS,W,SV%,GAA,SO
+100.0,Andrei,Vasilevskiy,24,Tampa Bay Lightning,G,63,37,0.9192,2.4897,4
+96.31,John,Gibson,25,Anaheim Ducks,G,60,32,0.9212,2.4123,4
+95.55,Pekka,Rinne,36,Nashville Predators,G,54,33,0.9209,2.3717,4
+92.9,Braden,Holtby,29,Washington Capitals,G,61,31,0.9154,2.5073,4
+92.75,Frederik,Andersen,29,Toronto Maple Leafs,G,63,37,0.9149,2.7317,4
+91.15,Marc-Andre,Fleury,34,Vegas Golden Knights,G,59,30,0.9165,2.5043,4
+91.11,Sergei,Bobrovsky,30,Columbus Blue Jackets,G,62,34,0.9203,2.4644,3
+90.67,Connor,Hellebuyck,25,Winnipeg Jets,G,63,35,0.9181,2.5248,3
+90.17,Devan,Dubnyk,32,Minnesota Wild,G,60,30,0.9233,2.3419,3
+89.27,Mike,Smith,36,Calgary Flames,G,57,30,0.9143,2.5335,4
+86.43,Martin,Jones,28,San Jose Sharks,G,60,32,0.9106,2.5193,3
+84.63,Cam,Talbot,31,Edmonton Oilers,G,66,32,0.9128,2.6798,3
+81.71,Matt,Murray,24,Pittsburgh Penguins,G,53,29,0.9141,2.6941,4
+80.42,Tuukka,Rask,31,Boston Bruins,G,57,30,0.9109,2.6125,3
+79.37,Ben,Bishop,32,Dallas Stars,G,54,25,0.9173,2.4495,3
+75.12,Antti,Raanta,29,Arizona Coyotes,G,56,25,0.924,2.4147,2
+70.7,Carey,Price,31,Montreal Canadiens,G,55,25,0.9157,2.5404,2
+70.34,Henrik,Lundqvist,36,New York Rangers,G,62,25,0.9165,2.667,2
+69.13,Corey,Crawford,34,Chicago Blackhawks,G,47,22,0.9255,2.3798,2
+67.87,Jake,Allen,28,St. Louis Blues,G,56,24,0.911,2.6171,2
+65.61,Brian,Elliott,33,Philadelphia Flyers,G,49,24,0.9133,2.5826,2
+63.5,Jonathan,Quick,32,Los Angeles Kings,G,48,20,0.9123,2.5122,2
+63.0,Semyon,Varlamov,30,Colorado Avalanche,G,51,25,0.916,2.7375,2
+62.96,Robin,Lehner,27,New York Islanders,G,47,22,0.9146,2.7973,3
+61.99,Carter,Hutton,33,Buffalo Sabres,G,52,23,0.9166,2.7262,2
+61.59,Craig,Anderson,37,Ottawa Senators,G,56,23,0.9136,2.8016,2
+58.04,Juuse,Saros,23,Nashville Predators,G,27,19,0.9218,2.335,2
+57.22,Jacob,Markstrom,28,Vancouver Canucks,G,52,21,0.9127,2.8219,2
+56.33,Keith,Kinkaid,29,New Jersey Devils,G,35,18,0.911,2.6992,3
+55.8,Roberto,Luongo,39,Florida Panthers,G,38,18,0.9265,2.3446,1
+53.26,Linus,Ullmark,25,Buffalo Sabres,G,29,14,0.9265,2.3782,2
+47.77,Cory,Schneider,32,New Jersey Devils,G,40,19,0,2,2
+45.86,Jaroslav,Halak,33,Boston Bruins,G,24,13,0.9124,2.5036,2
+45.2,Casey,DeSmith,27,Pittsburgh Penguins,G,25,13,0.9252,2.3362,1
+44.58,Petr,Mrazek,26,Carolina Hurricanes,G,33,16,0.9074,2.5635,1
+44.25,Jimmy,Howard,34,Detroit Red Wings,G,48,16,0.9091,2.8198,1
+43.78,Philipp,Grubauer,27,Colorado Avalanche,G,29,15,0.9236,2.5104,1
+38.46,James,Reimer,30,Florida Panthers,G,32,14,0.9154,2.7006,1
+38.21,Jack,Campbell,26,Los Angeles Kings,G,26,11,0.9121,2.5148,1
+36.75,Aaron,Dell,29,San Jose Sharks,G,21,11,0.9207,2.2732,0
+35.35,Thomas,Greiss,32,New York Islanders,G,34,14,0.9128,2.836,1
+33.81,Scott,Darling,30,Carolina Hurricanes,G,30,16,0,2,1
+33.51,Ryan,Miller,38,Anaheim Ducks,G,21,11,0.9219,2.3845,0
+33.08,Antti,Niemi,35,Montreal Canadiens,G,26,13,0.9088,2.7482,1
+32.53,David,Rittich,26,Calgary Flames,G,24,13,0.9082,2.734,1
+31.75,Chad,Johnson,32,St. Louis Blues,G,25,11,0.9081,2.714,1
+30.85,Anton,Khudobin,32,Dallas Stars,G,27,13,0.9039,2.8355,1
+30.56,Curtis,McElhinney,35,Carolina Hurricanes,G,17,10,0.9146,2.3815,0
+28.49,Darcy,Kuemper,28,Arizona Coyotes,G,25,11,0.912,2.8285,1
+25.87,Michal,Neuvirth,30,Philadelphia Flyers,G,23,11,0,2,1
+24.71,Louis,Domingue,26,Tampa Bay Lightning,G,18,12,0.9147,2.6591,0
+22.82,Anders,Nilsson,28,Vancouver Canucks,G,23,11,0.9134,2.7719,0
+21.79,Pheonix,Copley,26,Washington Capitals,G,20,10,0.9083,2.722,0
+20.87,Jonathan,Bernier,30,Detroit Red Wings,G,33,10,0.9034,2.9594,0
+20.25,Joonas,Korpisalo,24,Columbus Blue Jackets,G,19,12,0.9085,2.8209,0
+19.64,Peter,Budaj,36,Los Angeles Kings,G,7,3,0.9137,2.3709,0
+18.55,Malcolm,Subban,25,Vegas Golden Knights,G,22,10,0.9029,2.8594,0
+15.78,Garret,Sparks,25,Toronto Maple Leafs,G,18,11,0.9094,2.9261,0
+14.58,Alex,Stalock,31,Minnesota Wild,G,21,10,0.9002,2.9752,0
+13.63,Cam,Ward,34,Chicago Blackhawks,G,24,12,0.9033,3.1218,0
+13.38,Marek,Mazanec,27,New York Rangers,G,18,7,0,2,0
+12.46,Laurent,Brossoit,25,Winnipeg Jets,G,18,11,0.9035,3.033,0
+11.95,Mikko,Koskinen,30,Edmonton Oilers,G,15,7,0,2,0
+10.2,Mike,Condon,28,Ottawa Senators,G,25,9,0.9,3.1576,0
+7.29,Calvin,Pickard,26,Philadelphia Flyers,G,8,5,0.903,2.8587,0
+6.32,Anton,Forsberg,26,Chicago Blackhawks,G,9,4,0,2,0
+2.57,Eddie,Lack,30,New Jersey Devils,G,5,2,0,2,0
+1.65,Thatcher,Demko,22,Vancouver Canucks,G,5,1,0,2,0
+0.7,Tristan,Jarry,23,Pittsburgh Penguins,G,3,1,0,2,0
+0.0,Michael,Hutchinson,28,Florida Panthers,G,11,5,0.8991,3.1512,0

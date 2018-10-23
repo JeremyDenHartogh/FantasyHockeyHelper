@@ -1,7 +1,7 @@
 var ascT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
-function sort_table(col){
-    var tbody = document.getElementById("rankings");
+function sort_table(col,id){
+    var tbody = document.getElementById(id);
     var asc = ascT[col];   
     ascT[col] *= -1;
     var rows = tbody.rows;

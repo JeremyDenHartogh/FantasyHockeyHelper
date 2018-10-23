@@ -1,109 +1,109 @@
-First Name,Last Name,Age,Team,Position,G,A,PPP,+/-,SOG,HITS
-Alexander,Steen,34,player[12],L,16,32,15,3,157,54
-Chris,Kunitz,39,player[12],L,8,13,1,3,86,145
-Thomas,Vanek,34,player[12],L,18,28,13,-4,158,37
-Zach,Parise,34,player[12],L,23,19,9,-4,216,54
-Loui,Eriksson,33,player[12],L,17,19,7,-3,152,21
-Alex,Ovechkin,33,player[12],L,40,36,27,-3,331,132
-Andrew,Ladd,33,player[12],L,14,15,4,0,127,94
-Blake,Comeau,32,player[12],L,11,19,3,-3,118,142
-Cody,McLeod,34,player[12],L,4,0,0,-4,41,210
-Andrew,Cogliano,31,player[12],L,15,21,3,2,154,86
-James,Neal,31,player[12],L,26,23,12,-3,224,60
-Justin,Abdelkader,31,player[12],L,12,21,8,-6,123,174
-Tom,Pyatt,31,player[12],L,8,12,0,-1,91,63
-Darren,Helm,31,player[12],L,13,15,2,-2,146,132
-Brad,Marchand,30,player[12],L,35,47,27,6,236,39
-Nick,Foligno,31,player[12],L,16,23,9,1,153,178
-Jamie,McGinn,30,player[12],L,13,14,5,-5,126,127
-Milan,Lucic,30,player[12],L,15,25,10,4,136,219
-Alex,Killorn,29,player[12],L,17,26,11,6,155,82
-Jamie,Benn,29,player[12],L,31,46,25,-1,236,115
-Pat,Maroon,30,player[12],L,18,21,8,3,151,154
-James,van Riemsdyk,29,player[12],L,30,29,18,0,240,46
-Paul,Byron,29,player[12],L,16,17,3,0,113,128
-David,Perron,30,player[12],L,16,38,18,-2,155,121
-Max,Pacioretty,30,player[12],L,25,29,16,-1,253,121
-Carl,Hagelin,30,player[12],L,14,22,4,6,156,105
-Zack,Smith,30,player[12],L,13,13,2,-2,128,116
-Mikkel,Boedker,29,player[12],L,15,23,9,-6,137,53
-Matt,Calvert,29,player[12],L,12,13,2,-1,120,80
-Matt,Martin,29,player[12],L,6,7,0,1,72,240
-Antoine,Roussel,29,player[12],L,11,15,2,3,93,113
-Mike,Hoffman,29,player[12],L,24,33,19,-5,239,32
-Marcus,Johansson,28,player[12],L,16,23,11,1,129,30
-Kyle,Clifford,27,player[12],L,11,11,1,1,123,187
-Evander,Kane,27,player[12],L,29,28,13,-4,303,150
-Magnus,Paajarvi,27,player[12],L,12,9,0,-1,125,105
-Chris,Kreider,27,player[12],L,22,25,14,1,189,134
-Tomas,Tatar,28,player[12],L,21,20,10,-3,166,70
-Marcus,Foligno,27,player[12],L,10,14,2,0,92,191
-Nicolas,Deslauriers,27,player[12],L,9,8,0,-1,102,286
-Gabriel,Bourque,28,player[12],L,5,7,0,-3,70,169
-Erik,Haula,27,player[12],L,24,25,13,0,178,82
-Anders,Lee,28,player[12],L,29,26,17,-8,208,106
-Jason,Zucker,26,player[12],L,27,29,13,6,214,78
-Connor,Brickley,26,player[12],L,9,14,2,0,104,147
-Austin,Watson,26,player[12],L,11,12,1,-1,108,178
-Jaden,Schwartz,26,player[12],L,27,42,18,8,209,63
-Taylor,Hall,27,player[12],L,34,50,30,-2,292,66
-Marcus,Sorensen,26,player[12],L,7,9,0,0,91,74
-Micheal,Ferland,26,player[12],L,17,21,7,-1,153,171
-Ryan,Dzingel,26,player[12],L,18,21,7,-2,144,70
-Ondrej,Palat,27,player[12],L,18,31,14,1,163,112
-Max,McCormick,26,player[12],L,8,7,0,-1,102,152
-Johnny,Gaudreau,25,player[12],L,26,56,27,0,233,14
-Brandon,Saad,26,player[12],L,23,25,8,1,221,35
-Matt,Nieto,26,player[12],L,12,15,1,-3,114,45
-Gabriel,Landeskog,26,player[12],L,23,35,17,-3,198,140
-Jonathan,Huberdeau,25,player[12],L,26,44,19,0,210,40
-Sven,Baertschi,26,player[12],L,17,19,10,-5,143,40
-Pontus,Aberg,25,player[12],L,10,14,3,0,106,49
-Phillip,Di Giuseppe,25,player[12],L,10,17,3,-1,120,151
-Tanner,Pearson,26,player[12],L,20,25,8,1,173,110
-Teuvo,Teravainen,24,player[12],L,22,38,19,3,188,31
-Filip,Forsberg,24,player[12],L,30,39,24,4,237,93
-Brendan,Leipsic,24,player[12],L,11,23,5,-2,137,55
-Jujhar,Khaira,24,player[12],L,10,15,2,0,103,146
-Jimmy,Vesey,25,player[12],L,16,14,4,-10,142,85
-Jordan,Martinook,26,player[12],L,11,14,1,-2,109,114
-Brock,McGinn,24,player[12],L,16,19,5,0,153,132
-Charles,Hudon,24,player[12],L,14,26,9,-3,193,136
-Taylor,Leier,24,player[12],L,9,11,1,0,92,40
-Kevin,Roy,25,player[12],L,13,3,0,-1,108,47
-Michael,Raffl,30,player[12],L,12,12,1,0,107,105
-Anthony,Duclair,23,player[12],L,17,20,7,0,141,63
-Miles,Wood,23,player[12],L,19,19,6,-2,180,84
-Andre,Burakovsky,23,player[12],L,17,24,8,1,143,58
-Adam,Erne,23,player[12],L,11,7,1,0,118,144
-Jacob,de la Rose,23,player[12],L,8,12,2,-1,87,177
-J.T.,Compher,23,player[12],L,16,17,6,-5,157,61
-Remi,Elie,23,player[12],L,10,15,2,1,90,116
-Artturi,Lehkonen,23,player[12],L,19,17,6,0,194,88
-William,Carrier,24,player[12],L,8,9,0,1,107,228
-Tyler,Bertuzzi,23,player[12],L,13,23,7,-1,145,91
-Max,Domi,23,player[12],L,15,35,13,-6,157,48
-Ross,Johnston,24,player[12],L,7,5,0,-1,83,154
-Conor,Sheary,26,player[12],L,20,21,6,3,154,37
-Daniel,Carr,27,player[12],L,12,15,5,0,120,69
-Pierre-Edouard,Bellemare,33,player[12],L,8,8,0,2,86,63
-Tomas,Nosek,26,player[12],L,11,11,1,0,111,74
-Nikolaj,Ehlers,22,player[12],L,28,38,18,4,230,40
-Nick,Ritchie,23,player[12],L,13,19,5,0,144,219
-Kevin,Fiala,22,player[12],L,24,28,12,1,199,45
-Brendan,Perlini,22,player[12],L,18,17,8,-7,155,88
-Jakub,Vrana,22,player[12],L,16,19,6,3,156,44
-Sonny,Milano,22,player[12],L,16,16,5,0,127,51
-Viktor,Arvidsson,25,player[12],L,29,32,13,0,250,34
-Oskar,Lindblom,22,player[12],L,11,16,5,2,133,99
-Anders,Bjork,22,player[12],L,11,20,7,1,104,58
-Kyle,Connor,22,player[12],L,28,32,13,-1,213,23
-Jake,DeBrusk,22,player[12],L,19,33,12,3,180,78
-Markus,Hannikainen,25,player[12],L,8,8,0,0,83,89
-Evan,Rodrigues,25,player[12],L,14,23,8,-1,157,42
-Artemi,Panarin,27,player[12],L,29,52,26,9,224,16
-Brandon,Tanev,27,player[12],L,8,11,1,3,104,226
-Matthew,Tkachuk,21,player[12],L,27,39,19,2,221,85
-Jesper,Bratt,20,player[12],L,15,28,10,-3,135,53
-Drake,Caggiula,24,player[12],L,14,14,4,-4,136,162
-Alex,Iafallo,25,player[12],L,13,19,5,1,140,64
+Value,First Name,Last Name,Age,Team,Position,G,A,PPP,+/-,SOG,HITS
+92.66,Alex,Ovechkin,33,Washington Capitals,L,42,35,29,-1,329,141
+85.97,Brad,Marchand,30,Boston Bruins,L,33,52,28,9,225,38
+83.31,Taylor,Hall,27,New Jersey Devils,L,32,53,33,-2,291,65
+83.1,Filip,Forsberg,24,Nashville Predators,L,32,38,21,10,238,88
+80.43,Jamie,Benn,29,Dallas Stars,L,32,46,26,1,238,114
+76.4,Artemi,Panarin,27,Columbus Blue Jackets,L,29,53,26,6,224,16
+73.95,Gabriel,Landeskog,26,Colorado Avalanche,L,27,34,18,7,201,133
+71.32,Matthew,Tkachuk,21,Calgary Flames,L,27,42,22,3,219,87
+71.05,Johnny,Gaudreau,25,Calgary Flames,L,28,57,29,-1,237,13
+70.31,Evander,Kane,27,San Jose Sharks,L,30,28,13,-2,310,149
+66.44,Jaden,Schwartz,26,St. Louis Blues,L,24,40,17,7,200,62
+65.23,Jason,Zucker,26,Minnesota Wild,L,28,29,12,7,223,77
+63.48,Teuvo,Teravainen,24,Carolina Hurricanes,L,20,41,19,9,188,28
+61.04,Viktor,Arvidsson,25,Nashville Predators,L,30,30,11,5,243,33
+59.46,Jonathan,Huberdeau,25,Florida Panthers,L,26,43,18,0,214,39
+57.81,Micheal,Ferland,26,Carolina Hurricanes,L,20,21,7,6,169,175
+56.97,Nikolaj,Ehlers,22,Winnipeg Jets,L,25,37,17,0,222,43
+55.71,Kyle,Connor,22,Winnipeg Jets,L,29,31,13,3,216,20
+55.66,Max,Pacioretty,30,Vegas Golden Knights,L,23,26,14,-4,251,128
+54.53,Chris,Kreider,27,New York Rangers,L,23,24,14,-1,196,135
+53.07,Ondrej,Palat,27,Tampa Bay Lightning,L,16,33,14,3,157,114
+52.93,James,van Riemsdyk,29,Philadelphia Flyers,L,26,26,16,1,214,40
+51.07,David,Perron,30,St. Louis Blues,L,18,37,20,-3,150,112
+50.23,Milan,Lucic,30,Edmonton Oilers,L,14,24,10,-1,130,231
+50.09,Zach,Parise,34,Minnesota Wild,L,23,24,9,3,219,51
+49.48,Anders,Lee,28,New York Islanders,L,28,25,17,-8,212,106
+48.16,Nick,Foligno,31,Columbus Blue Jackets,L,17,23,9,0,153,169
+47.8,Jake,DeBrusk,22,Boston Bruins,L,19,29,10,2,179,76
+46.74,Tomas,Tatar,28,Montreal Canadiens,L,22,23,11,2,172,70
+46.19,James,Neal,31,Calgary Flames,L,24,21,10,-1,217,64
+46.02,Carl,Hagelin,30,Pittsburgh Penguins,L,13,21,3,8,158,112
+45.42,Pat,Maroon,30,St. Louis Blues,L,16,23,10,-1,153,155
+45.35,Mike,Hoffman,29,Florida Panthers,L,24,32,19,-8,236,31
+44.8,Alex,Killorn,29,Tampa Bay Lightning,L,17,23,11,3,156,84
+44.52,Alexander,Steen,34,St. Louis Blues,L,16,32,16,0,158,59
+44.14,Brandon,Tanev,27,Winnipeg Jets,L,8,12,0,7,109,233
+43.07,Kevin,Fiala,22,Nashville Predators,L,22,26,11,-1,195,40
+42.72,Erik,Haula,27,Vegas Golden Knights,L,22,22,11,-2,175,82
+42.07,Charles,Hudon,24,Montreal Canadiens,L,14,24,9,-3,184,135
+41.13,Brandon,Saad,26,Chicago Blackhawks,L,20,24,7,0,214,36
+40.96,Artturi,Lehkonen,23,Montreal Canadiens,L,18,19,5,1,194,83
+40.04,Jakub,Vrana,22,Washington Capitals,L,16,18,5,7,160,45
+39.17,Tanner,Pearson,26,Los Angeles Kings,L,18,23,7,-3,168,111
+38.83,Nick,Ritchie,23,Anaheim Ducks,L,11,16,4,0,128,194
+38.54,Paul,Byron,29,Montreal Canadiens,L,18,18,2,2,120,133
+37.8,Andrew,Cogliano,31,Anaheim Ducks,L,14,21,3,4,156,77
+35.56,Max,Domi,23,Montreal Canadiens,L,15,36,14,-6,157,50
+35.06,Nicolas,Deslauriers,27,Montreal Canadiens,L,8,7,0,0,93,265
+34.57,Anthony,Duclair,23,Columbus Blue Jackets,L,17,20,7,1,139,59
+33.66,Tyler,Bertuzzi,23,Detroit Red Wings,L,13,23,8,-2,136,98
+33.23,Miles,Wood,23,New Jersey Devils,L,17,20,6,-4,175,83
+33.12,Brock,McGinn,24,Carolina Hurricanes,L,14,17,4,-3,145,138
+32.9,Ryan,Dzingel,26,Ottawa Senators,L,18,21,6,-2,147,69
+32.66,William,Carrier,24,Vegas Golden Knights,L,7,8,0,-1,113,239
+32.54,Matt,Martin,29,New York Islanders,L,7,6,0,2,74,242
+31.53,Marcus,Foligno,27,Minnesota Wild,L,10,12,1,0,89,196
+31.52,Alex,Iafallo,25,Los Angeles Kings,L,13,22,6,0,138,66
+31.43,Evan,Rodrigues,25,Buffalo Sabres,L,12,24,8,0,155,37
+31.19,Marcus,Johansson,28,New Jersey Devils,L,15,22,11,0,127,30
+31.16,Andrew,Ladd,33,New York Islanders,L,14,15,3,2,123,89
+30.28,Zack,Smith,30,Ottawa Senators,L,13,14,1,0,127,124
+30.0,Kyle,Clifford,27,Los Angeles Kings,L,9,9,0,0,113,184
+29.3,Conor,Sheary,26,Buffalo Sabres,L,20,19,8,-4,155,35
+29.07,Jesper,Bratt,20,New Jersey Devils,L,13,25,9,-2,125,49
+27.89,Mikkel,Boedker,29,Ottawa Senators,L,15,25,9,-5,138,51
+27.87,Drake,Caggiula,24,Edmonton Oilers,L,12,12,3,-5,133,160
+27.76,Loui,Eriksson,33,Vancouver Canucks,L,15,20,6,0,144,19
+27.46,Anders,Bjork,22,Boston Bruins,L,10,19,6,3,98,54
+27.19,J.T.,Compher,23,Colorado Avalanche,L,17,16,7,-4,149,56
+27.0,Sven,Baertschi,26,Vancouver Canucks,L,17,20,12,-6,140,42
+26.91,Oskar,Lindblom,22,Philadelphia Flyers,L,11,14,4,-1,132,94
+26.77,Jordan,Martinook,26,Carolina Hurricanes,L,11,13,0,0,119,119
+26.68,Sonny,Milano,22,Columbus Blue Jackets,L,15,14,4,1,121,51
+26.52,Austin,Watson,26,Nashville Predators,L,9,10,0,0,97,160
+26.21,Darren,Helm,31,Detroit Red Wings,L,12,15,1,-4,145,121
+26.18,Phillip,Di Giuseppe,25,Carolina Hurricanes,L,9,15,2,-2,109,140
+25.53,Andre,Burakovsky,23,Washington Capitals,L,15,21,7,-5,136,57
+24.33,Antoine,Roussel,29,Vancouver Canucks,L,10,13,1,1,88,110
+24.06,Connor,Brickley,26,Nashville Predators,L,8,12,1,0,93,132
+24.05,Jacob,de la Rose,23,Detroit Red Wings,L,7,10,1,0,78,159
+23.86,Jamie,McGinn,30,Florida Panthers,L,12,12,4,-4,116,117
+23.82,Brendan,Perlini,22,Arizona Coyotes,L,17,15,8,-9,152,81
+23.71,Adam,Erne,23,Tampa Bay Lightning,L,10,7,0,-1,111,138
+23.56,Justin,Abdelkader,31,Detroit Red Wings,L,10,19,7,-11,119,167
+23.53,Thomas,Vanek,34,Detroit Red Wings,L,18,25,13,-12,151,42
+23.33,Blake,Comeau,32,Dallas Stars,L,10,18,2,-7,118,149
+22.81,Michael,Raffl,30,Philadelphia Flyers,L,10,12,0,0,100,107
+22.54,Matt,Calvert,29,Colorado Avalanche,L,10,11,1,0,122,83
+22.1,Magnus,Paajarvi,27,Ottawa Senators,L,10,8,0,0,120,98
+21.75,Daniel,Carr,27,Vegas Golden Knights,L,10,13,4,0,108,62
+21.46,Jujhar,Khaira,24,Edmonton Oilers,L,9,13,1,-4,97,143
+21.44,Max,McCormick,26,Ottawa Senators,L,7,6,0,0,95,140
+21.24,Brendan,Leipsic,24,Vancouver Canucks,L,10,20,4,-3,127,51
+20.75,Remi,Elie,23,Buffalo Sabres,L,8,13,1,0,80,107
+20.74,Chris,Kunitz,39,Chicago Blackhawks,L,7,12,0,-2,87,142
+18.72,Ross,Johnston,24,New York Islanders,L,6,5,0,0,75,141
+17.81,Gabriel,Bourque,28,Colorado Avalanche,L,4,7,0,-2,67,169
+17.06,Marcus,Sorensen,26,San Jose Sharks,L,7,9,0,1,95,73
+16.44,Pontus,Aberg,25,Anaheim Ducks,L,8,12,2,0,98,47
+14.59,Tomas,Nosek,26,Vegas Golden Knights,L,10,9,0,-4,115,75
+14.03,Markus,Hannikainen,25,Columbus Blue Jackets,L,7,7,0,0,75,81
+13.79,Pierre-Edouard,Bellemare,33,Vegas Golden Knights,L,8,7,0,0,88,61
+13.73,Jimmy,Vesey,25,New York Rangers,L,17,12,4,-14,151,81
+13.21,Matt,Nieto,26,Colorado Avalanche,L,10,14,0,-4,113,44
+13.08,Tom,Pyatt,31,Ottawa Senators,L,7,10,0,-1,86,63
+12.88,Cody,McLeod,34,New York Rangers,L,3,0,0,-4,43,200
+12.43,Kevin,Roy,25,Anaheim Ducks,L,11,2,0,0,96,41
+11.3,Taylor,Leier,24,Philadelphia Flyers,L,8,9,0,0,81,35

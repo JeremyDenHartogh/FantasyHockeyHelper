@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root 'landing#index'
     get 'leagueinfo', to: 'league#info'
-    get 'freeagents', to: 'freeagents#allFA'
+    get 'freeagents', to: 'freeagents#full'
     get 'freeagentsC', to: 'freeagents#center'
     get 'freeagentsD', to: 'freeagents#defence'
     get 'freeagentsLW', to: 'freeagents#leftwing'
