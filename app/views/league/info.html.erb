@@ -3,7 +3,7 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "cookies" %>
   </head>
-  <body onload='indexCheck()'>
+  <body onload='indexCheck_plusTeam("<%= @usersTeam %>", "<%= @draftStatus %>")'>
     <%= render 'shared/header' %>
     <div class="page">
       <% if @info %>

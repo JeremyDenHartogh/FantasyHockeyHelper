@@ -6,6 +6,17 @@ class LeagueController < ApplicationController
         @settings = @info['settings']
         @roster_positions = @settings['roster_positions']['roster_position']
         @stat_categories = @settings['stat_categories']['stats']['stat']
+        @response2 = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/standings", :authorization => "Bearer #{params[:token]}")
+        @info2 = Hash.from_xml(@response2.body)['fantasy_content']['league']
+        @standings = @info2['standings']['teams']['team']
+        @usersTeam = ""
+        @draftStatus = @info['draft_status']
+        puts @draftStatus
+        for team in @standings
+          if team["managers"]["manager"]["is_current_login"]
+            @usersTeam = team["team_key"]
+          end
+        end
     rescue
         @response = "ERROR: League ID not Found"
     end
@@ -23,7 +34,6 @@ class LeagueController < ApplicationController
           @standings.sort_by!{ |t| t['name'] }
         end
       end
-      puts (@standings)
     rescue
       @response = "ERROR: League ID not Found"
     end
@@ -33,7 +43,10 @@ class LeagueController < ApplicationController
     begin
       @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/team/#{params[:team]}/roster/", :authorization => "Bearer #{params[:token]}")
       @info = Hash.from_xml(@response.body)['fantasy_content']['team']
-      @roster = @info['roster']['players']['player']
+      @players = []
+      @count = 0
+      @dropValue = [101,101,101,101]
+      @dropRec = ["","","",""]
       
       fileName = 'StatProjector/WeeksData.csv'
       csv_text = File.read(Rails.root + fileName)
@@ -60,10 +73,8 @@ class LeagueController < ApplicationController
       fileName = 'StatProjector/FullProjections.csv'
       csv_text = File.read(Rails.root + fileName)
       @projections = CSV.parse(csv_text, :headers => true)
-      @players = []
-      @count = 0
-      @dropValue = [101,101,101,101]
-      @dropRec = ["","","",""]
+
+      @roster = @info['roster']['players']['player']
       for player in @roster do
         stats = @projections.find {|row| row['Last Name'] == player["name"]["last"] && row['First Name'] == player["name"]["first"] && row['Team'] ==  player["editorial_team_full_name"]}
         schedule = @dates.find {|row| row[0] == player["editorial_team_full_name"]}
@@ -86,7 +97,6 @@ class LeagueController < ApplicationController
           @players.push([player,schedule,gp,stats])
         else
           @players.push([player,schedule,gp])
-          puts player
         end
       end
     rescue
@@ -104,8 +114,6 @@ end
 
 def getRange(fInd,lInd,datesCSV)
   returnDates = []
-  puts fInd
-  puts lInd
   for row in datesCSV
     cutRow = [row[0]]
     for i in fInd..lInd
@@ -120,7 +128,7 @@ def getRange(fInd,lInd,datesCSV)
 end
 
 def isLowestPlayer(player,stats,index)
-  if stats["Value"].to_f < @dropValue[index]
+  if stats["Value"].to_f < @dropValue[index] && player['selected_position']['position'] != "IR" && player['selected_position']['position'] != "IR+" && player['selected_position']['position'] != "NA"
     @dropValue[index] = stats["Value"].to_f
     @dropRec[index] = "#{player["name"]["first"]} #{player["name"]["last"]}"
   end

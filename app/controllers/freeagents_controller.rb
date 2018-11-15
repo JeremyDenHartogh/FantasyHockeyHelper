@@ -68,7 +68,11 @@ class FreeagentsController < ApplicationController
       @position = position
       @count = 1
       @freeagents = []
+      @waivers = []
       @players = []
+      @count2 = 0
+      @dropValue = -1
+      @dropRec = ""
       
       fileName = 'StatProjector/WeeksData.csv'
       csv_text = File.read(Rails.root + fileName)
@@ -91,37 +95,17 @@ class FreeagentsController < ApplicationController
       @dates = CSV.parse(csv_text, :headers => false)
       @dates = getRange(currWeek[3].to_i,currWeek[4].to_i,@dates)
       @datesHeader = @dates[0]
+      if (position == "C" || position == "L" || position == "R")
+        fileName = 'StatProjector/' + 'F' + 'Projections.csv'
+      else
+        fileName = 'StatProjector/' + position + 'Projections.csv'
+      end
       
-      fileName = 'StatProjector/' + position + 'Projections.csv'
       csv_text = File.read(Rails.root + fileName)
       @projections = CSV.parse(csv_text, :headers => true)
-      for i in 0..1 do
-        if position == "Full"
-          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;", :authorization => "Bearer #{params[:token]}")
-        else
-          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;position=#{position}", :authorization => "Bearer #{params[:token]}")
-        end
-        @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
-      end
-      @count2 = 0
-      @dropValue = -1
-      @dropRec = ""
-      for player in @freeagents do
-        stats = @projections.find {|row| (row['Last Name'] == player["name"]["last"] && row['First Name'] == player["name"]["first"] && row['Team'] == player["editorial_team_full_name"])}
-        if stats 
-          schedule = @dates.find {|row| row[0] == player["editorial_team_full_name"]}
-          gp = 0
-          isBestPlayer(player,stats)
-          for i in 1..schedule.length-1
-            if schedule[i] != "-"
-             gp += 1
-            end
-          end
-          @players.push([player,stats,schedule,gp])
-        else
-          puts player
-        end
-      end
+      
+      getPlayers(position,params[:state])
+
       @players.sort! {|a, b| b[1]['Value'].to_f <=> a[1]['Value'].to_f}
       @info = Hash.from_xml(@response.body)['fantasy_content']['league']
     rescue
@@ -156,5 +140,70 @@ def isBestPlayer(player,stats)
   if stats["Value"].to_f > @dropValue
     @dropValue = stats["Value"].to_f
     @dropRec = "#{player["name"]["first"]} #{player["name"]["last"]}"
+  end
+end
+
+def getFAInfo(type, array)
+  for player in array do
+    stats = @projections.find {|row| (row['Last Name'] == player["name"]["last"] && row['First Name'] == player["name"]["first"] && row['Team'] == player["editorial_team_full_name"])}
+    if stats 
+      schedule = @dates.find {|row| row[0] == player["editorial_team_full_name"]}
+      gp = 0
+      isBestPlayer(player,stats)
+      for i in 1..schedule.length-1
+        if schedule[i] != "-"
+         gp += 1
+        end
+      end
+      @players.push([player,stats,schedule,gp,type])
+    else
+      puts player
+    end
+  end
+end
+
+def getPlayers(position,type)
+  puts "A"
+  if type == "postdraft"
+    begin
+      if position == "Full"
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=W;start=0;count=25;sort=AR;", :authorization => "Bearer #{params[:token]}")
+        else
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=W;start=0;count=25;sort=AR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+      end
+      @waivers.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
+      for i in 0..2 do
+        if position == "Full"
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=FA;start=#{i*25};count=25;sort=AR;", :authorization => "Bearer #{params[:token]}")
+        else
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=FA;start=#{i*25};count=25;sort=AR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+        end
+        @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
+      end
+      getFAInfo("Yes",@waivers)
+      getFAInfo("No",@freeagents)
+    rescue
+      @freeagents = []
+      for i in 0..3 do
+        if position == "Full"
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;", :authorization => "Bearer #{params[:token]}")
+        else
+          @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=AR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+        end
+        @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
+      end
+      getFAInfo("No",@freeagents)
+    end
+  else
+    @freeagents = []
+    for i in 0..5 do
+      if position == "Full"
+        @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=OR;", :authorization => "Bearer #{params[:token]}")
+      else
+        @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/players;status=A;start=#{i*25};count=25;sort=OR;position=#{position}", :authorization => "Bearer #{params[:token]}")
+      end
+      @freeagents.push(*Hash.from_xml(@response.body)['fantasy_content']['league']['players']['player']) 
+    end
+    getFAInfo("N/A",@freeagents)
   end
 end

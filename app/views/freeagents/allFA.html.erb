@@ -17,7 +17,7 @@
             <p class="dropRec"> <%= @position %>: <%= @dropRec %></p>
           </div>
           
-          <h3>Free Agents Projections - <%= @list %></h3>
+          <h3>Available Players Projections - <%= @list %></h3>
           <%= render 'shared/faheader' %>
           <table>
             <tr>
@@ -28,18 +28,19 @@
               <th class="data" onclick="sort_table(4,'rankings')">Position</th>
               <th class="data" onclick="sort_table(5,'rankings')">Value</th>
               <th class="data" onclick="sort_table(6,'rankings')">Games this Week</th>
+              <th class="data" onclick="sort_table(7,'rankings')">On Waivers</th>
               <% if @position && @position != 'G' && @position != 'Full' %>
-                <th class="data" onclick="sort_table(7,'rankings')">Goals</th>
-                <th class="data" onclick="sort_table(8,'rankings')">Assists</th>
-                <th class="data" onclick="sort_table(9,'rankings')">Plus/Minus</th>
-                <th class="data" onclick="sort_table(10,'rankings')">Shots</th>
-                <th class="data" onclick="sort_table(11,'rankings')">Powerplay Points</th>
-                <th class="data" onclick="sort_table(12,'rankings')">Hits</th>   
+                <th class="data" onclick="sort_table(8,'rankings')">Goals</th>
+                <th class="data" onclick="sort_table(9,'rankings')">Assists</th>
+                <th class="data" onclick="sort_table(10,'rankings')">Plus/Minus</th>
+                <th class="data" onclick="sort_table(11,'rankings')">Shots</th>
+                <th class="data" onclick="sort_table(12,'rankings')">Powerplay Points</th>
+                <th class="data" onclick="sort_table(13,'rankings')">Hits</th>   
               <% elsif @position == 'G' %>
-                <th class="data" onclick="sort_table(7,'rankings')">Wins</th>
-                <th class="data" onclick="sort_table(8,'rankings')">Save Percentage</th>
-                <th class="data" onclick="sort_table(9,'rankings')">Goals Against Average</th>
-                <th class="data" onclick="sort_table(10,'rankings')">Shutouts</th>
+                <th class="data" onclick="sort_table(8,'rankings')">Wins</th>
+                <th class="data" onclick="sort_table(9,'rankings')">Save Percentage</th>
+                <th class="data" onclick="sort_table(10,'rankings')">Goals Against Average</th>
+                <th class="data" onclick="sort_table(11,'rankings')">Shutouts</th>
               <% end %>
             </tr>
             <tbody id="rankings">
@@ -53,6 +54,7 @@
                     <td class="tableData"><%= player[0]['display_position'] %></td>
                     <td class="tableData"><%= player[1]['Value'] %></td>
                     <td class="tableData"><%= player[3]%></td>
+                    <td class="tableData"><%= player[4]%></td>
                     <% if @position != 'G' && @position != 'Full'%>
                       <td class="tableData"><%= player[1]['G'] %></td>
                       <td class="tableData"><%= player[1]['A'] %></td>
@@ -88,9 +90,10 @@
           <h3>Free Agents Schedule - <%= @list %></h3>
           <table>
             <tr>
-              <th class="data" onclick="sort_table(1,'schedule')">First Name</th>
-              <th class="data" onclick="sort_table(2,'schedule')">Last Name</th>
-              <th class="data" onclick="sort_table(3,'schedule')">Position</th>
+              <th class="data" onclick="sort_table(0,'schedule')">First Name</th>
+              <th class="data" onclick="sort_table(1,'schedule')">Last Name</th>
+              <th class="data" onclick="sort_table(2,'schedule')">Position</th>
+              <th class="data" onclick="sort_table(3,'schedule')">Games this Week</th>
               <% @count2 = 4 %>
               <% for item in @datesHeader do%>
                 <th class="data" onclick="sort_table(<%= @count2 %>,'schedule')" ><%= item %> </th>
@@ -103,6 +106,7 @@
                     <td class="dateData"><%= player[0]['name']['first'] %></td>
                     <td class="dateData"><%= player[0]['name']['last'] %></td>
                     <td class="dateData"><%= player[0]['display_position'] %></td>
+                    <td class="dateData"><%= player[3]%></td>
                     <% for item in player[2] do%>
                       <td class="dateData"><%= item %></td>
                     <% end %>

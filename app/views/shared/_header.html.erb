@@ -1,21 +1,25 @@
 <%= javascript_include_tag "cookies" %>
 <div class="headers">
     <div class="header">
-        <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH3.png">
+        <img class="logo" border="0" alt="FantasyHockeyHelper" src="/assets/FHH5.png">
     </div>
   <div class="links">
-    <form action="/" method="GET" class="aLinks">
-      <input type="submit" value="Home" class="aClone">
+    <form action="/home" method="GET" class="aLinks">
+      <input type="hidden" name="token" value="" id='hToken'>
+      <input type="submit" value="Home" class="aClone" onclick="getHomeInfo();">
     </form>
     <form action="/leagueinfo" method="GET" class="aLinks" id="options">
         <input type="hidden" name="leagueid" value="" id="lsubmitID">
+        <input type="hidden" name="" value="" id='lState'>
         <input type="hidden" name="token" value="" id='lToken'>
+        <input type="hidden" name="" value="" id='lTeam'>
         <input type="submit" value="League Info" class="aClone" onclick="getLeagueInfo();">
         <input type="submit" value="Standings"  class="aClone" onclick="getStandings();">
-        <input type="submit" value="Free Agents"  class="aClone" onclick="getFreeAgentInfo();">
+        <input type="submit" value="My Roster" id="teamElement" class="aClone" onclick="getTeamInfo();">
+        <input type="submit" value="Free Agents" id="players" class="aClone" onclick="getFreeAgentInfo();">
     </form>
-    <form action="/draft" method="GET" class="aLinks">
-        <input type="submit" value="Draft Rankings" class="aClone">
+    <form action="/rankings" method="GET" class="aLinks">
+        <input type="submit" value="Rankings" class="aClone">
     </form>
     <form action="/login" method="GET" class="aLinks">
         <input type="submit" value="Logout" class="aClone" onclick="eraseCookie();">

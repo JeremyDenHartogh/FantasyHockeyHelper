@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "cookies" %>
+  </head>
+  <body onload='indexCheck()'>
+    <%= render 'shared/header' %>
+    <div class="page">
+        <h1 id="nickname"> Welcome </h1>
+        Click on your league below.
+          <form action="/leagueinfo" method="GET" class="homeForm">
+            <input type="hidden" name="leagueid" value="0" id='submitID'>
+            <input type="hidden" name="token" value="token" id='token'>
+            <% for league in @leagues do%>
+              <input type="submit" value="<%= league['leagueName'] %>" class="leaguesButton" onclick="setLeague(<%= league['leagueID'] %>)">
+              <br>
+            <% end %>  
+          </form>
+    </div>
+
+  </body>
+</html>

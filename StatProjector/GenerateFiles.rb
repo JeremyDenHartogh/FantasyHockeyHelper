@@ -136,7 +136,9 @@ def addStat(array,stats,position,index)
     if player[4] == position
       if (position == "G" && index == 11)
         player[player.length-1] -= ((player[index].to_f - stats[0]) / stats[1])
-      else
+      elsif (position != "G" && index != 9)
+        player[player.length-1] += ((player[index].to_f - stats[0]) / stats[1])
+      elsif (position == "G")
         player[player.length-1] += ((player[index].to_f - stats[0]) / stats[1])
       end
     end
