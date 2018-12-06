@@ -20,15 +20,23 @@ end
 
 def getTeams()
   for player in @skater_data
-    team = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/people/#{player[5]}"))["people"][0]["currentTeam"]["name"]
+    puts player
+    begin
+      team = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/people/#{player[5]}"))["people"][0]["currentTeam"]["name"]
+    rescue
+      team = "N/A"
+    end
     if team.include? "Canadiens"
       team = "Montreal Canadiens"
     end
     player.push(team)
-    puts player
   end
   for goalie in @goalie_data
-    team = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/people/#{goalie[5]}"))["people"][0]["currentTeam"]["name"]
+    begin
+      team = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/people/#{goalie[5]}"))["people"][0]["currentTeam"]["name"]
+    rescue
+      team = "N/A"
+    end
     if team.include? "Canadiens"
       team = "Montreal Canadiens"
     end
@@ -49,6 +57,7 @@ def getGamesPlayedArray()
       @games_played[teamName] = team["gamesPlayed"]
     end
   end
+  @games_played["N/A"] = 82
 end
 
 def getMidSeasonStatistics()

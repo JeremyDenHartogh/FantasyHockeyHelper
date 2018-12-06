@@ -3,7 +3,11 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "cookies" %>
   </head>
-  <body onload='indexCheck_plusTeam("<%= @usersTeam %>", "<%= @draftStatus %>")'>
+  <% if @playoffStartWeek and @playoffEndWeek %>
+    <body onload='indexCheck_plusTeam("<%= @usersTeam %>", "<%= @draftStatus %>", "<%= @playoffStartWeek %>", "<%= @playoffEndWeek %>")'>
+  <% else %>
+    <body onload='indexCheck_plusTeam("<%= @usersTeam %>", "<%= @draftStatus %>", -1, -1)'>
+  <% end %>
     <%= render 'shared/header' %>
     <div class="page">
       <% if @info %>
@@ -27,6 +31,11 @@
         <h3>Stat Categories: </h3>
         <% for cat in @stat_categories do%>
           <%= cat['name'] %><br>
+        <% end %>
+        
+        <% if @playoffStartWeek and @playoffEndWeek %>
+          <h3>Playoff Weeks: </h3>
+          <p> Playoff Weeks: Week <%= @playoffStartWeek %> - Week <%= @playoffEndWeek %></p>
         <% end %>
       <% end %>
     </div>

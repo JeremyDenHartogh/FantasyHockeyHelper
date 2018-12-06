@@ -24,6 +24,5 @@ Rails.application.routes.draw do
     get 'rankingsF', to: 'draft#forward'
     get 'rankingsS', to: 'draft#skater'
     get 'roster', to: 'league#roster'
-    get '*path', to: 'errors#not_found'
-
+    match '*path' => redirect('/'), via: :get
 end

@@ -73,28 +73,39 @@ class FreeagentsController < ApplicationController
       @count2 = 0
       @dropValue = -1
       @dropRec = ""
+      @dropValueW = -1
+      @dropRecW = ""
       
       fileName = 'StatProjector/WeeksData.csv'
       csv_text = File.read(Rails.root + fileName)
-      weeks = CSV.parse(csv_text, :headers => true)
-    
+      @weeks = CSV.parse(csv_text, :headers => true)
+      @currWeek = []
+      @displayWeek = []
       startDate = Date.new(2018, 10, 3)
       endDate = Date.new(2019, 4, 6)
       currDate = DateTime.now-(4/24.0) 
       currDateIndex = ((endDate-startDate).to_i - (endDate-currDate).to_i )
-      currWeek = []
-      for week in weeks
-        currWeek = betweenDates(currDateIndex,week)
-        if currWeek != []
+      for week in @weeks
+        @currWeek = betweenDates(currDateIndex,week)
+        if @currWeek != []
           break
         end
       end
       
+      if (params[:week])
+        @displayWeek = @weeks[params[:week].to_i - 1]
+      else
+        @displayWeek = @currWeek
+      end
+      @playoffStartWeek = params[:pStart].to_i
+      @playoffEndWeek = params[:pEnd].to_i
       fileName = 'StatProjector/Schedule.csv'
       csv_text = File.read(Rails.root + fileName)
       @dates = CSV.parse(csv_text, :headers => false)
-      @dates = getRange(currWeek[3].to_i,currWeek[4].to_i,@dates)
+      @dates = getRange(@displayWeek[3].to_i,@displayWeek[4].to_i,@dates)
       @datesHeader = @dates[0]
+      @daysLeft = @displayWeek[4].to_i - currDateIndex + 1
+      
       if (position == "C" || position == "L" || position == "R")
         fileName = 'StatProjector/' + 'F' + 'Projections.csv'
       else
@@ -136,10 +147,14 @@ def getRange(fInd,lInd,datesCSV)
   return returnDates
 end
 
-def isBestPlayer(player,stats)
+def isBestPlayer(player,stats,gl)
   if stats["Value"].to_f > @dropValue
     @dropValue = stats["Value"].to_f
     @dropRec = "#{player["name"]["first"]} #{player["name"]["last"]}"
+  end
+  if stats["Value"].to_f*gl > @dropValueW
+    @dropValueW = stats["Value"].to_f*gl
+    @dropRecW = "#{player["name"]["first"]} #{player["name"]["last"]}"
   end
 end
 
@@ -149,13 +164,21 @@ def getFAInfo(type, array)
     if stats 
       schedule = @dates.find {|row| row[0] == player["editorial_team_full_name"]}
       gp = 0
-      isBestPlayer(player,stats)
+      gLeft = 0
       for i in 1..schedule.length-1
         if schedule[i] != "-"
-         gp += 1
+          gp += 1
+          if @displayWeek != @currWeek
+            gLeft = gp
+          else
+            if i > schedule.length-1 - @daysLeft
+              gLeft +=1
+            end
+          end
         end
       end
-      @players.push([player,stats,schedule,gp,type])
+      isBestPlayer(player,stats,gLeft)
+      @players.push([player,stats,schedule,gp,type,gLeft])
     else
       puts player
     end
@@ -163,7 +186,6 @@ def getFAInfo(type, array)
 end
 
 def getPlayers(position,type)
-  puts "A"
   if type == "postdraft"
     begin
       if position == "Full"

@@ -1,8 +1,11 @@
 <%= javascript_include_tag "cookies" %>
-<form action="/rankings" method="GET" class="homeForm" id="positions">
+<form action="/freeagents" method="GET" class="homeForm" id="positions">
     <input type="hidden" name="leagueid" value="" id="fsubmitID">
-    <input type="hidden" name="token" value="" id='fToken'>
     <input type="hidden" name="state" value="" id='fState'>
+    <input type="hidden" name="week" value="" id='fWeek'>
+    <input type="hidden" name="" value="" id='fStart'>
+    <input type="hidden" name="" value="" id='fEnd'>
+    <input type="hidden" name="token" value="" id='fToken'>
     <input type="submit" value="All Players"  class="submitButton" onclick="getFreeAgentInfo2();">
     <input type="submit" value="Skaters"  class="submitButton" onclick="setPosition('S');">
     <input type="submit" value="Goalies"  class="submitButton" onclick="setPosition('G');">

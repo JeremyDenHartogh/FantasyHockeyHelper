@@ -66,8 +66,50 @@ p {
   color: #FFF;
 }
 
+.submitButtonP {
+  background-color: #FCC201;
+  margin: 10px 0px;
+  color: black;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.submitButtonN {
+  background-color: #777;
+  margin: 10px 0px;
+  color: black;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;
+}
+
 .submitButton:hover {
   background-color: #380066;
+  color: #FFF;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.submitButtonP:hover {
+  background-color: #C99000;
+  color: #FFF;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.submitButtonN:hover {
+  background-color: #444;
   color: #FFF;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

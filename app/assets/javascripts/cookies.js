@@ -39,6 +39,10 @@ function eraseCookie(){
     document.cookie = "nickname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "submitid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "teamkey=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "draftStatus=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "week=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "playoffStart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "playoffEnd=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     return true;
 }
 
@@ -77,9 +81,11 @@ function indexCheckHome(){
     }
 }
 
-function indexCheck_plusTeam(teamKey,draftStatus){
+function indexCheck_plusTeam(teamKey,draftStatus,playoffStart,playoffEnd){
     createCookie('teamkey',teamKey);
     createCookie('draftStatus',draftStatus);
+    createCookie('playoffStart',playoffStart);
+    createCookie('playoffEnd',playoffEnd);
     indexCheck();
 }
 
@@ -114,6 +120,7 @@ function getRosterInfo(){
 }
 
 function getFreeAgentInfo(){
+    document.cookie = "week=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.getElementById("options").action = '/freeagents';
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("lToken").value = getCookie("token");
@@ -124,6 +131,14 @@ function getFreeAgentInfo(){
     if (getCookie("draftStatus") && getCookie("draftStatus") != ""){
         document.getElementById("lState").value = getCookie("draftStatus");
         document.getElementById("lState").name = "state";
+    }
+    if (getCookie("playoffStart") && getCookie("playoffStart") != ""){
+        document.getElementById("lStart").value = getCookie("playoffStart");
+        document.getElementById("lStart").name = "pStart";
+    }
+    if (getCookie("playoffEnd") && getCookie("playoffEnd") != ""){
+        document.getElementById("lEnd").value = getCookie("playoffEnd");
+        document.getElementById("lEnd").name = "pEnd";
     }
 }
 
@@ -149,6 +164,37 @@ function getTeamInfo(){
         document.getElementById("lTeam").value = getCookie("teamkey");
         document.getElementById("lTeam").name = "team";
     }
+    if (getCookie("playoffStart") && getCookie("playoffStart") != ""){
+        document.getElementById("lStart").value = getCookie("playoffStart");
+        document.getElementById("lStart").name = "pStart";
+    }
+    if (getCookie("playoffEnd") && getCookie("playoffEnd") != ""){
+        document.getElementById("lEnd").value = getCookie("playoffEnd");
+        document.getElementById("lEnd").name = "pEnd";
+    }
+}
+
+function getTeamInfo2(){ 
+    if (getCookie("token") && getCookie("token") != ""){
+        document.getElementById("wToken").value = getCookie("token");
+    }
+    if (getCookie("submitid") && getCookie("submitid") != ""){
+        document.getElementById("wsubmitID").value = getCookie("submitid");
+    }
+    if (getCookie("teamkey") && getCookie("teamkey") != ""){
+        document.getElementById("wTeam").value = getCookie("teamkey");
+    }
+    if (getCookie("playoffStart") && getCookie("playoffStart") != ""){
+        document.getElementById("wStart").value = getCookie("playoffStart");
+        document.getElementById("wStart").name = "pStart";
+    }
+    if (getCookie("playoffEnd") && getCookie("playoffEnd") != ""){
+        document.getElementById("wEnd").value = getCookie("playoffEnd");
+        document.getElementById("wEnd").name = "pEnd";
+    }
+    if (getCookie("week") && getCookie("week") != ""){
+        document.getElementById("wWeek").value = getCookie("week");
+    }
 }
 
 function getFreeAgentInfo2(){
@@ -161,12 +207,58 @@ function getFreeAgentInfo2(){
     if (getCookie("draftStatus") && getCookie("draftStatus") != ""){
         document.getElementById("fState").value = getCookie("draftStatus");
     }
+    if (getCookie("playoffStart") && getCookie("playoffStart") != ""){
+        document.getElementById("fStart").value = getCookie("playoffStart");
+        document.getElementById("fStart").name = "pStart";
+    }
+    if (getCookie("playoffEnd") && getCookie("playoffEnd") != ""){
+        document.getElementById("fEnd").value = getCookie("playoffEnd");
+        document.getElementById("fEnd").name = "pEnd";
+    }
+    if (getCookie("week") && getCookie("week") != ""){
+        document.getElementById("fWeek").value = getCookie("week");
+    }
 }
+
+function getFreeAgentInfo3(){
+    if (getCookie("token") && getCookie("token") != ""){
+        document.getElementById("wToken").value = getCookie("token");
+    }
+    if (getCookie("submitid") && getCookie("submitid") != ""){
+        document.getElementById("wsubmitID").value = getCookie("submitid");
+    }
+    if (getCookie("draftStatus") && getCookie("draftStatus") != ""){
+        document.getElementById("wState").value = getCookie("draftStatus");
+    }
+    if (getCookie("playoffStart") && getCookie("playoffStart") != ""){
+        document.getElementById("wStart").value = getCookie("playoffStart");
+        document.getElementById("wStart").name = "pStart";
+    }
+    if (getCookie("playoffEnd") && getCookie("playoffEnd") != ""){
+        document.getElementById("wEnd").value = getCookie("playoffEnd");
+        document.getElementById("wEnd").name = "pEnd";
+    }
+    if (getCookie("week") && getCookie("week") != ""){
+        document.getElementById("wWeek").value = getCookie("week");
+    }
+}
+
 
 function setPosition(pos){
     getFreeAgentInfo2();
     document.getElementById("positions").action = "http://www.fantasyhockeyhelper.com/freeagents" + pos;
 }
+
+function setWeek(week){
+    createCookie('week',week);
+    getTeamInfo2();
+}
+
+function setWeekFA(week){
+    createCookie('week',week);
+    getFreeAgentInfo3();
+}
+
 
 function setDPosition(pos){
     document.getElementById("positions").action = "http://www.fantasyhockeyhelper.com/rankings" + pos;

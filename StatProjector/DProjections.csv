@@ -1,228 +1,228 @@
 Value,First Name,Last Name,Age,Team,Position,G,A,PPP,+/-,SOG,HITS
-100.0,Brent,Burns,33,San Jose Sharks,D,17,52,28,-1,292,72
-84.91,John,Carlson,28,Washington Capitals,D,15,48,28,0,221,52
-82.34,Kris,Letang,31,Pittsburgh Penguins,D,12,48,21,9,228,113
-81.06,Roman,Josi,28,Nashville Predators,D,16,40,19,9,254,74
-79.38,Shayne,Gostisbehere,25,Philadelphia Flyers,D,13,42,27,-7,230,54
-79.32,Erik,Karlsson,28,San Jose Sharks,D,10,53,24,-11,232,62
-78.6,Victor,Hedman,28,Tampa Bay Lightning,D,15,41,20,0,204,104
-77.09,John,Klingberg,26,Dallas Stars,D,14,48,24,1,203,42
-76.39,Dougie,Hamilton,25,Carolina Hurricanes,D,16,32,15,3,267,85
-76.06,Drew,Doughty,29,Los Angeles Kings,D,11,44,22,-1,190,119
-75.94,Rasmus,Ristolainen,24,Buffalo Sabres,D,7,36,21,-18,204,201
-75.35,P.K.,Subban,29,Nashville Predators,D,11,44,22,6,209,93
-75.32,Dustin,Byfuglien,33,Winnipeg Jets,D,9,37,21,4,216,152
-75.3,Morgan,Rielly,24,Toronto Maple Leafs,D,13,43,24,2,208,57
-73.45,Seth,Jones,24,Columbus Blue Jackets,D,16,36,17,4,215,78
-70.24,Tyson,Barrie,27,Colorado Avalanche,D,10,45,24,0,207,42
-70.06,Zach,Werenski,21,Columbus Blue Jackets,D,16,35,16,3,220,54
-69.87,Oliver,Ekman-Larsson,27,Arizona Coyotes,D,11,33,16,-1,201,147
-66.03,Justin,Faulk,26,Carolina Hurricanes,D,10,28,15,-1,232,124
-65.97,Torey,Krug,27,Boston Bruins,D,10,40,21,0,190,66
-65.49,Matt,Dumba,24,Minnesota Wild,D,14,27,13,0,189,130
-61.53,Jeff,Petry,31,Montreal Canadiens,D,9,30,14,-3,165,163
-60.9,Mark,Giordano,35,Calgary Flames,D,11,35,13,15,203,76
-60.08,Ivan,Provorov,21,Philadelphia Flyers,D,12,29,7,-4,198,133
-59.95,Alex,Pietrangelo,28,St. Louis Blues,D,12,35,13,-6,206,51
-59.63,Keith,Yandle,32,Florida Panthers,D,9,42,19,-2,182,35
-58.41,Colton,Parayko,25,St. Louis Blues,D,11,28,11,6,193,111
-57.58,Jake,Muzzin,29,Los Angeles Kings,D,8,29,11,-4,166,166
-56.92,Ryan,Suter,33,Minnesota Wild,D,8,40,18,1,154,69
-55.97,Aaron,Ekblad,22,Florida Panthers,D,12,24,10,-3,213,81
-54.7,Hampus,Lindholm,24,Anaheim Ducks,D,13,25,10,2,161,105
-54.55,Shea,Weber,33,Montreal Canadiens,D,10,19,12,1,172,145
-54.3,Ryan,Pulock,24,New York Islanders,D,9,24,9,-4,203,123
-53.76,Ryan,Ellis,27,Nashville Predators,D,11,32,11,13,185,58
-52.5,Colin,Miller,26,Vegas Golden Knights,D,8,26,10,0,168,139
-52.07,Mikhail,Sergachev,20,Tampa Bay Lightning,D,7,33,14,2,163,91
-51.5,Oscar,Klefbom,25,Edmonton Oilers,D,8,26,10,6,233,63
-51.21,Neal,Pionk,23,New York Rangers,D,4,31,14,-10,163,132
-50.44,Thomas,Chabot,21,Ottawa Senators,D,10,33,11,-5,155,67
-50.38,Kevin,Shattenkirk,29,New York Rangers,D,8,28,15,-8,169,72
-50.37,Jacob,Trouba,24,Winnipeg Jets,D,8,27,6,3,189,123
-49.88,Sami,Vatanen,27,New Jersey Devils,D,6,29,13,-1,170,103
-48.07,Jared,Spurgeon,29,Minnesota Wild,D,10,28,11,5,144,80
-47.81,Will,Butcher,23,New Jersey Devils,D,6,42,20,2,113,30
-47.76,Nick,Leddy,27,New York Islanders,D,7,31,13,-11,140,92
-47.14,Noah,Hanifin,21,Calgary Flames,D,8,28,9,2,170,86
-47.04,Charlie,McAvoy,21,Boston Bruins,D,6,34,9,7,116,139
-46.68,Jake,Gardiner,28,Toronto Maple Leafs,D,7,36,13,1,131,68
-46.2,Darnell,Nurse,23,Edmonton Oilers,D,7,20,3,0,189,153
-46.14,Cam,Fowler,27,Anaheim Ducks,D,11,28,10,0,164,36
-45.97,Alexander,Edler,32,Vancouver Canucks,D,4,23,10,-9,167,147
-45.62,Matt,Niskanen,32,Washington Capitals,D,7,26,5,-2,147,148
-45.43,Shea,Theodore,23,Vegas Golden Knights,D,8,27,10,-6,193,44
-45.3,Erik,Johnson,30,Colorado Avalanche,D,6,22,4,0,195,135
-44.19,Mattias,Ekholm,28,Nashville Predators,D,10,28,8,13,138,73
-43.67,Ryan,McDonagh,29,Tampa Bay Lightning,D,5,31,10,9,148,95
-43.66,Damon,Severson,24,New Jersey Devils,D,8,27,6,-3,140,112
-42.44,Brent,Seabrook,33,Chicago Blackhawks,D,6,27,11,-1,141,89
-42.37,Vince,Dunn,22,St. Louis Blues,D,8,26,11,-2,165,42
-42.06,Olli,Maatta,24,Pittsburgh Penguins,D,7,21,7,6,144,127
-41.64,Brady,Skjei,24,New York Rangers,D,5,26,5,-3,147,138
-41.54,Brandon,Montour,24,Anaheim Ducks,D,7,22,7,-3,164,97
-41.41,Jaccob,Slavin,24,Carolina Hurricanes,D,9,28,6,1,161,52
-40.99,Adam,Larsson,26,Edmonton Oilers,D,4,17,1,8,109,256
-40.45,Josh,Manson,27,Anaheim Ducks,D,7,19,3,12,119,177
-40.09,Radko,Gudas,28,Philadelphia Flyers,D,4,18,1,6,150,201
-40.02,Robert,Hagg,23,Philadelphia Flyers,D,5,11,0,2,121,257
-39.91,Nikita,Zadorov,23,Colorado Avalanche,D,4,15,2,-2,111,246
-39.8,Esa,Lindell,24,Dallas Stars,D,7,22,6,7,147,106
-38.76,Mike,Green,33,Detroit Red Wings,D,6,24,10,-5,134,84
-38.52,Dmitry,Orlov,27,Washington Capitals,D,7,21,5,-6,126,128
-38.06,Josh,Morrissey,23,Winnipeg Jets,D,6,22,6,5,122,129
-37.89,Erik,Gustafsson,26,Chicago Blackhawks,D,6,25,7,1,160,67
-37.76,Alex,Goligoski,33,Arizona Coyotes,D,6,27,6,-14,121,104
-37.56,Tyler,Myers,28,Winnipeg Jets,D,6,23,8,-2,154,72
-37.38,Mike,Matheson,24,Florida Panthers,D,9,18,5,-2,170,60
-37.18,Jamie,Oleksiak,26,Pittsburgh Penguins,D,7,15,1,7,106,194
-36.24,Michael,Del Zotto,28,Vancouver Canucks,D,4,14,2,-7,114,214
-35.98,Duncan,Keith,35,Chicago Blackhawks,D,3,33,9,3,157,40
-35.93,Alec,Martinez,31,Los Angeles Kings,D,7,18,6,-9,123,114
-35.29,Joel,Edmundson,25,St. Louis Blues,D,6,16,2,10,137,146
-34.24,Johnny,Boychuk,34,New York Islanders,D,4,12,1,1,168,157
-33.88,Noah,Juulsen,21,Montreal Canadiens,D,4,12,1,4,122,201
-33.86,Tony,DeAngelo,23,New York Rangers,D,5,21,8,3,143,72
-33.65,Justin,Schultz,28,Pittsburgh Penguins,D,5,26,11,2,122,46
-33.54,Cody,Ceci,25,Ottawa Senators,D,6,16,2,-11,135,132
-33.04,Jakob,Chychrun,20,Arizona Coyotes,D,6,16,5,-2,140,100
-32.55,Marc-Edouard,Vlasic,31,San Jose Sharks,D,7,24,4,2,157,35
-32.15,Dion,Phaneuf,33,Los Angeles Kings,D,2,16,5,-16,126,159
-31.96,Samuel,Girard,20,Colorado Avalanche,D,5,24,9,1,115,62
-31.82,Matt,Benning,24,Edmonton Oilers,D,4,17,3,0,120,146
-31.48,Brett,Pesce,24,Carolina Hurricanes,D,8,18,4,8,123,75
-31.4,Jordan,Oesterle,26,Arizona Coyotes,D,6,18,5,-1,130,86
-31.09,Brayden,McNabb,27,Vegas Golden Knights,D,4,10,0,1,95,220
-30.96,Anton,Stralman,32,Tampa Bay Lightning,D,5,20,3,4,119,112
-30.95,David,Savard,28,Columbus Blue Jackets,D,5,16,1,4,136,128
-30.83,TJ,Brodie,28,Calgary Flames,D,5,30,8,5,118,28
-30.74,Zdeno,Chara,41,Boston Bruins,D,6,13,1,8,130,133
-30.62,Brenden,Dillon,28,San Jose Sharks,D,5,13,1,-1,96,180
-30.61,Mark,Borowiecki,29,Ottawa Senators,D,0,5,0,-4,82,305
-30.05,Steven,Santini,23,New Jersey Devils,D,3,11,1,-2,114,192
-29.77,Jake,McCabe,25,Buffalo Sabres,D,5,19,2,0,91,142
-29.7,Markus,Nutivaara,24,Columbus Blue Jackets,D,6,21,4,4,125,69
-29.59,Travis,Dermott,22,Toronto Maple Leafs,D,3,22,4,-1,123,105
-29.14,Derrick,Pouliot,24,Vancouver Canucks,D,4,21,6,5,103,98
-28.9,Troy,Stecher,24,Vancouver Canucks,D,4,19,3,2,118,112
-28.69,Brian,Dumoulin,27,Pittsburgh Penguins,D,5,20,2,12,106,112
-28.28,Dylan,DeMelo,25,Ottawa Senators,D,5,21,4,4,96,99
-28.05,Calvin,de Haan,27,Carolina Hurricanes,D,4,15,3,3,115,126
-27.94,Brandon,Manning,28,Chicago Blackhawks,D,5,13,1,-8,116,135
-27.83,Justin,Braun,31,San Jose Sharks,D,4,18,1,6,109,131
-27.82,Alexander,Petrovic,26,Florida Panthers,D,2,16,1,4,96,180
-27.54,Ian,Cole,29,Colorado Avalanche,D,5,18,2,10,100,117
-27.27,Kevin,Connauton,28,Arizona Coyotes,D,4,13,0,-1,134,131
-27.05,Marco,Scandella,28,Buffalo Sabres,D,5,16,2,0,132,89
-27.03,John,Moore,28,Boston Bruins,D,4,12,1,4,134,126
-26.91,Stephen,Johns,26,Dallas Stars,D,4,9,0,0,111,170
-26.81,Brad,Hunt,30,Vegas Golden Knights,D,4,19,9,3,128,38
-26.54,Ben,Hutton,25,Vancouver Canucks,D,6,15,4,-10,129,64
-26.29,Adam,Pelech,24,New York Islanders,D,4,17,2,2,117,106
-26.18,Joe,Morrow,26,Winnipeg Jets,D,4,14,4,-3,118,103
-25.67,Matt,Grzelcyk,24,Boston Bruins,D,4,19,7,5,108,63
-25.54,Scott,Mayfield,26,New York Islanders,D,4,17,1,3,102,122
-25.46,Jason,Demers,30,Arizona Coyotes,D,5,17,3,3,109,86
-25.29,Alex,Biega,30,Vancouver Canucks,D,0,11,1,-2,115,187
-25.23,Travis,Sanheim,22,Philadelphia Flyers,D,4,20,4,1,132,52
-25.07,Nikita,Zaitsev,27,Toronto Maple Leafs,D,2,17,2,-5,89,150
-24.12,Ben,Chiarot,27,Winnipeg Jets,D,4,13,1,4,87,143
-23.75,Connor,Murphy,25,Chicago Blackhawks,D,4,13,2,1,95,124
-23.39,Derek,Forbort,26,Los Angeles Kings,D,3,17,1,1,84,134
-23.28,Jack,Johnson,31,Pittsburgh Penguins,D,4,10,1,-6,101,135
-23.16,Erik,Gudbranson,26,Vancouver Canucks,D,1,10,0,-7,97,185
-23.1,Nick,Holden,31,Vegas Golden Knights,D,3,15,0,0,88,144
-22.96,Mike,Reilly,25,Montreal Canadiens,D,4,16,5,0,113,62
-22.89,Oscar,Fantenberg,27,Los Angeles Kings,D,2,13,5,-3,101,114
-22.66,Jonas,Brodin,25,Minnesota Wild,D,7,14,3,3,108,49
-22.57,Greg,Pateryn,28,Minnesota Wild,D,2,12,0,4,100,154
-22.41,Luke,Schenn,29,Anaheim Ducks,D,0,7,0,-9,72,231
-22.37,Nate,Schmidt,27,Vegas Golden Knights,D,4,20,6,3,96,48
-22.22,Connor,Carrick,24,Dallas Stars,D,5,13,3,-3,110,74
-22.09,Travis,Hamonic,28,Calgary Flames,D,5,13,0,0,113,92
-21.93,Michael,Stone,28,Calgary Flames,D,2,17,2,-1,99,111
-21.82,Roman,Polak,32,Dallas Stars,D,1,9,0,6,76,199
-21.69,Tim,Heed,27,San Jose Sharks,D,4,17,6,0,123,28
-21.45,Gustav,Forsling,22,Chicago Blackhawks,D,4,13,4,-2,133,49
-21.4,Andreas,Borgman,23,Toronto Maple Leafs,D,2,11,1,0,82,159
-21.27,Brandon,Carlo,22,Boston Bruins,D,4,11,1,6,98,115
-21.12,Ryan,Murray,25,Columbus Blue Jackets,D,4,21,4,1,87,56
-21.02,Jake,Dotchin,24,Anaheim Ducks,D,2,14,2,3,87,129
-20.94,John,Gilmour,25,New York Rangers,D,4,9,1,-1,147,71
-20.91,Mark,Pysyk,26,Florida Panthers,D,5,14,0,0,96,94
-20.8,Kevan,Miller,31,Boston Bruins,D,2,13,0,12,70,164
-20.51,Brandon,Davidson,27,Chicago Blackhawks,D,4,9,0,-1,92,131
-20.42,Thomas,Hickey,29,New York Islanders,D,3,16,1,10,101,94
-20.35,Xavier,Ouellet,25,Montreal Canadiens,D,3,13,1,-3,116,92
-20.06,Nathan,Beaulieu,26,Buffalo Sabres,D,5,14,3,1,94,66
-19.99,Christian,Folin,27,Philadelphia Flyers,D,1,11,0,8,73,176
-19.71,Jan,Rutta,28,Chicago Blackhawks,D,4,18,3,-1,107,44
-19.38,MacKenzie,Weegar,24,Florida Panthers,D,2,12,0,3,92,133
-19.31,Nick,Jensen,28,Detroit Red Wings,D,4,14,1,-7,102,79
-19.18,Michal,Kempny,28,Washington Capitals,D,3,11,0,5,118,96
-19.05,Jordie,Benn,31,Montreal Canadiens,D,4,10,0,3,92,113
-18.89,Dan,Girardi,34,Tampa Bay Lightning,D,1,12,0,2,84,150
-18.87,Slater,Koekkoek,24,Tampa Bay Lightning,D,5,9,1,0,107,80
-18.7,Brendan,Smith,29,New York Rangers,D,3,11,0,-2,102,108
-18.39,Fredrik,Claesson,26,New York Rangers,D,1,10,0,1,75,164
-17.48,Trevor,van Riemsdyk,27,Carolina Hurricanes,D,4,15,2,8,109,43
-17.29,Chad,Ruhwedel,28,Pittsburgh Penguins,D,2,10,0,-3,102,113
-17.19,Danny,DeKeyser,28,Detroit Red Wings,D,5,10,0,-3,84,91
-17.08,Kris,Russell,31,Edmonton Oilers,D,2,16,1,2,88,90
-17.02,Joakim,Ryan,25,San Jose Sharks,D,4,14,1,6,104,56
-16.96,Brooks,Orpik,38,Washington Capitals,D,1,5,0,0,48,202
-16.93,Robert,Bortuzzo,29,St. Louis Blues,D,3,7,0,1,82,131
-16.6,Haydn,Fleury,22,Carolina Hurricanes,D,2,12,1,0,98,94
-16.37,Casey,Nelson,26,Buffalo Sabres,D,3,13,1,3,100,72
-15.93,Niklas,Kronwall,37,Detroit Red Wings,D,0,17,5,-6,70,90
-15.64,Eric,Gryba,30,New Jersey Devils,D,0,6,0,1,64,182
-15.57,Braydon,Coburn,33,Tampa Bay Lightning,D,3,9,0,4,94,97
-15.57,Madison,Bowey,23,Washington Capitals,D,2,16,2,0,80,77
-15.27,Mark,Barberio,28,Colorado Avalanche,D,4,14,2,-5,88,49
-15.09,Deryk,Engelland,36,Vegas Golden Knights,D,1,9,0,-3,92,121
-14.81,Adam,McQuaid,32,New York Rangers,D,1,8,0,0,61,155
-14.33,Patrik,Nemeth,26,Colorado Avalanche,D,2,12,0,0,87,92
-14.15,Ron,Hainsey,37,Toronto Maple Leafs,D,2,13,0,6,76,97
-14.05,Steven,Kampfer,30,Boston Bruins,D,0,5,1,-3,87,141
-13.84,Karl,Alzner,30,Montreal Canadiens,D,2,9,0,1,71,118
-13.66,Andrej,Sekera,32,Edmonton Oilers,D,2,14,4,0,80,54
-13.26,Nick,Seeler,25,Minnesota Wild,D,2,12,1,7,80,82
-13.24,Julius,Honka,23,Dallas Stars,D,3,12,1,2,102,46
-13.06,Christian,Djoos,24,Washington Capitals,D,3,14,2,6,87,43
-12.63,Ben,Lovejoy,34,New Jersey Devils,D,1,7,0,8,86,114
-12.59,Ian,McCoshen,23,Florida Panthers,D,1,7,0,0,71,129
-12.27,Mirco,Mueller,23,New Jersey Devils,D,3,14,0,0,75,63
-12.25,Luca,Sbisa,28,New York Islanders,D,0,11,1,-1,72,112
-11.93,Kurtis,MacDermid,24,Los Angeles Kings,D,0,8,0,-1,55,148
-11.81,Trevor,Daley,35,Detroit Red Wings,D,4,11,0,1,98,36
-11.74,Matt,Irwin,31,Nashville Predators,D,1,7,0,2,82,110
-11.26,Victor,Mete,20,Montreal Canadiens,D,3,12,4,6,88,20
-11.2,Jonathan,Ericsson,34,Detroit Red Wings,D,1,6,0,1,70,122
-11.06,Dmitry,Kulikov,28,Winnipeg Jets,D,1,11,1,0,71,89
-10.78,Ryan,Murphy,25,Minnesota Wild,D,3,11,2,0,92,31
-10.74,Sebastian,Aho,22,New York Islanders,D,3,9,2,-1,90,42
-10.58,David,Schlemko,31,Montreal Canadiens,D,2,9,2,0,82,62
-10.52,Andrew,MacDonald,32,Philadelphia Flyers,D,2,14,0,-2,82,53
-10.34,Marcus,Pettersson,22,Anaheim Ducks,D,2,9,2,0,73,69
-10.33,Marc,Methot,33,Dallas Stars,D,0,4,0,0,54,153
-10.15,Jakub,Jerabek,27,St. Louis Blues,D,1,11,0,-3,75,84
-10.07,Jon,Merrill,26,Vegas Golden Knights,D,2,8,0,0,78,81
-9.74,Ben,Harpur,23,Ottawa Senators,D,1,6,0,1,57,122
-9.39,Matt,Hunwick,33,Buffalo Sabres,D,1,8,0,-2,77,89
-9.21,Marc,Staal,31,New York Rangers,D,1,7,0,-5,76,93
-9.14,Scott,Harrington,25,Columbus Blue Jackets,D,1,9,0,3,76,83
-9.08,Brett,Kulak,24,Montreal Canadiens,D,3,9,0,2,79,53
-9.07,Jay,Bouwmeester,35,St. Louis Blues,D,1,9,0,-6,90,68
-8.69,Anton,Lindholm,24,Colorado Avalanche,D,0,6,0,-1,43,140
-8.62,Andrej,Sustr,28,Anaheim Ducks,D,4,10,0,0,78,32
-8.45,Andy,Greene,36,New Jersey Devils,D,1,7,0,-3,77,85
-7.98,Tucker,Poolman,25,Winnipeg Jets,D,2,6,0,1,84,65
-7.97,Anthony,Bitetto,28,Nashville Predators,D,0,9,0,0,60,102
-7.94,Yannick,Weber,30,Nashville Predators,D,1,6,0,3,78,84
-7.56,Christopher,Tanev,29,Vancouver Canucks,D,2,13,0,-4,67,46
-6.87,Gustav,Olofsson,24,Montreal Canadiens,D,2,12,2,1,49,48
-6.43,Dan,Hamhuis,36,Nashville Predators,D,0,12,0,1,57,77
-6.05,Niklas,Hjalmarsson,31,Arizona Coyotes,D,2,12,0,8,63,41
-4.94,Rob,O'Gara,25,New York Rangers,D,0,5,0,0,56,97
-1.51,Carl,Gunnarsson,32,St. Louis Blues,D,1,4,0,1,60,53
-0.0,Nate,Prosser,32,Minnesota Wild,D,0,4,0,0,39,74
+100.0,Brent,Burns,33,San Jose Sharks,D,15,55,29,-4,289,70
+84.9,John,Carlson,28,Washington Capitals,D,12,54,29,14,214,51
+82.93,Roman,Josi,28,Nashville Predators,D,15,41,19,4,271,70
+81.77,Kris,Letang,31,Pittsburgh Penguins,D,11,46,21,4,233,111
+81.22,Erik,Karlsson,28,San Jose Sharks,D,10,49,26,-12,238,65
+80.09,Morgan,Rielly,24,Toronto Maple Leafs,D,15,44,24,9,208,56
+79.32,Matt,Dumba,24,Minnesota Wild,D,18,29,17,-5,205,131
+78.59,Rasmus,Ristolainen,24,Buffalo Sabres,D,8,36,18,-13,204,216
+77.86,Victor,Hedman,28,Tampa Bay Lightning,D,14,40,22,0,196,93
+76.63,Dustin,Byfuglien,33,Winnipeg Jets,D,8,38,23,4,210,148
+76.17,Shayne,Gostisbehere,25,Philadelphia Flyers,D,12,39,25,-15,227,57
+74.34,Drew,Doughty,29,Los Angeles Kings,D,10,40,22,-5,186,123
+73.08,Dougie,Hamilton,25,Carolina Hurricanes,D,14,29,13,-2,266,97
+72.06,Oliver,Ekman-Larsson,27,Arizona Coyotes,D,10,34,17,-8,199,153
+69.69,Tyson,Barrie,27,Colorado Avalanche,D,11,44,22,5,197,40
+69.25,Seth,Jones,24,Columbus Blue Jackets,D,13,36,15,8,214,80
+68.61,Zach,Werenski,21,Columbus Blue Jackets,D,14,34,17,1,211,59
+68.0,Keith,Yandle,32,Florida Panthers,D,8,45,27,-9,186,34
+67.55,John,Klingberg,26,Dallas Stars,D,13,41,21,1,176,36
+66.93,Mark,Giordano,35,Calgary Flames,D,11,39,16,18,201,77
+66.51,Torey,Krug,27,Boston Bruins,D,8,42,23,-2,188,61
+65.86,Jeff,Petry,31,Montreal Canadiens,D,9,32,14,-10,168,171
+64.74,P.K.,Subban,29,Nashville Predators,D,10,38,18,8,183,78
+64.67,Aaron,Ekblad,22,Florida Panthers,D,16,24,11,-2,209,88
+64.13,Thomas,Chabot,21,Ottawa Senators,D,13,40,13,0,171,72
+62.9,Justin,Faulk,26,Carolina Hurricanes,D,9,25,12,0,233,128
+62.26,Alex,Pietrangelo,28,St. Louis Blues,D,13,33,13,-5,200,59
+58.11,Colin,Miller,26,Vegas Golden Knights,D,8,28,13,2,165,143
+56.99,Ivan,Provorov,21,Philadelphia Flyers,D,11,28,6,-3,186,124
+56.05,Colton,Parayko,25,St. Louis Blues,D,11,23,9,10,191,112
+56.04,Neal,Pionk,23,New York Rangers,D,5,31,16,-6,156,137
+55.54,Ryan,Suter,33,Minnesota Wild,D,7,41,17,3,147,63
+55.47,Hampus,Lindholm,24,Anaheim Ducks,D,12,25,12,-4,153,100
+55.04,Oscar,Klefbom,25,Edmonton Oilers,D,8,27,12,1,236,59
+54.98,Jake,Muzzin,29,Los Angeles Kings,D,8,25,8,1,155,174
+52.57,Ryan,Ellis,27,Nashville Predators,D,10,30,10,11,187,59
+52.33,Noah,Hanifin,21,Calgary Flames,D,9,29,12,3,160,86
+52.08,Ryan,Pulock,24,New York Islanders,D,7,25,7,-4,201,124
+51.67,Jacob,Trouba,24,Winnipeg Jets,D,8,29,5,11,186,118
+50.59,Jared,Spurgeon,29,Minnesota Wild,D,10,30,10,11,151,76
+49.96,Mikhail,Sergachev,20,Tampa Bay Lightning,D,6,32,12,3,157,93
+49.34,Damon,Severson,24,New Jersey Devils,D,9,28,7,-10,145,114
+48.81,Matt,Niskanen,32,Washington Capitals,D,7,25,6,-6,149,152
+48.6,Shea,Weber,33,Montreal Canadiens,D,10,15,10,3,149,128
+48.35,Kevin,Shattenkirk,29,New York Rangers,D,7,26,13,-6,165,78
+48.32,Shea,Theodore,23,Vegas Golden Knights,D,9,29,9,-1,193,40
+47.77,Sami,Vatanen,27,New Jersey Devils,D,5,28,11,-9,167,102
+47.75,Mattias,Ekholm,28,Nashville Predators,D,10,30,10,16,132,69
+46.49,Nick,Leddy,27,New York Islanders,D,7,27,12,-11,136,92
+46.39,Erik,Johnson,30,Colorado Avalanche,D,7,20,3,4,189,136
+46.02,Brandon,Montour,24,Anaheim Ducks,D,7,26,8,-5,166,92
+45.81,Ryan,McDonagh,29,Tampa Bay Lightning,D,6,34,8,19,142,90
+45.24,Mike,Green,33,Detroit Red Wings,D,7,28,9,5,143,91
+45.09,Darnell,Nurse,23,Edmonton Oilers,D,7,17,2,-3,186,148
+44.11,Jake,Gardiner,28,Toronto Maple Leafs,D,6,34,11,5,129,66
+43.98,Brent,Seabrook,33,Chicago Blackhawks,D,6,24,10,-2,152,95
+43.97,Josh,Morrissey,23,Winnipeg Jets,D,7,25,7,9,128,122
+43.51,Radko,Gudas,28,Philadelphia Flyers,D,4,16,1,7,150,219
+43.41,Esa,Lindell,24,Dallas Stars,D,8,21,6,3,147,111
+43.12,Adam,Larsson,26,Edmonton Oilers,D,3,18,1,1,113,255
+43.04,Robert,Hagg,23,Philadelphia Flyers,D,4,14,0,8,124,256
+42.69,Nikita,Zadorov,23,Colorado Avalanche,D,5,14,2,5,107,242
+42.49,Jaccob,Slavin,24,Carolina Hurricanes,D,9,25,7,-9,156,56
+41.84,Olli,Maatta,24,Pittsburgh Penguins,D,6,22,6,9,138,127
+41.47,Josh,Manson,27,Anaheim Ducks,D,8,17,2,8,110,176
+41.22,Will,Butcher,23,New Jersey Devils,D,5,34,16,2,117,29
+41.14,Erik,Gustafsson,26,Chicago Blackhawks,D,8,23,6,-2,155,74
+41.01,Dmitry,Orlov,27,Washington Capitals,D,8,23,4,-7,124,117
+40.61,Vince,Dunn,22,St. Louis Blues,D,7,23,10,0,164,45
+40.29,Brady,Skjei,24,New York Rangers,D,5,23,3,-7,136,145
+40.27,Alexander,Edler,32,Vancouver Canucks,D,4,20,8,-7,148,124
+39.91,Charlie,McAvoy,21,Boston Bruins,D,6,28,7,6,96,116
+39.91,Samuel,Girard,20,Colorado Avalanche,D,6,26,13,-2,119,60
+39.76,Mike,Matheson,24,Florida Panthers,D,7,23,7,-4,167,56
+39.5,Jamie,Oleksiak,26,Pittsburgh Penguins,D,7,15,1,8,97,200
+38.86,Alec,Martinez,31,Los Angeles Kings,D,8,20,5,-6,116,112
+38.65,Cam,Fowler,27,Anaheim Ducks,D,9,25,8,1,139,31
+38.13,Michael,Del Zotto,28,Vancouver Canucks,D,4,13,1,0,107,226
+37.79,Johnny,Boychuk,34,New York Islanders,D,2,12,3,0,184,165
+36.74,Alex,Goligoski,33,Arizona Coyotes,D,6,25,6,-9,110,95
+35.34,Tyler,Myers,28,Winnipeg Jets,D,5,21,6,1,150,75
+35.32,Joel,Edmundson,25,St. Louis Blues,D,5,17,1,4,133,145
+34.61,Matt,Benning,24,Edmonton Oilers,D,5,17,2,0,119,145
+34.53,Cody,Ceci,25,Ottawa Senators,D,7,15,1,-6,130,124
+34.35,David,Savard,28,Columbus Blue Jackets,D,5,18,1,8,137,128
+33.53,TJ,Brodie,28,Calgary Flames,D,6,30,7,16,120,27
+32.88,Jake,McCabe,25,Buffalo Sabres,D,6,18,2,1,89,141
+32.79,Ben,Hutton,25,Vancouver Canucks,D,6,16,8,-19,132,65
+32.5,Brayden,McNabb,27,Vegas Golden Knights,D,4,10,0,1,92,211
+32.24,Duncan,Keith,35,Chicago Blackhawks,D,2,29,7,-1,152,41
+32.18,Scott,Mayfield,26,New York Islanders,D,5,21,1,5,107,124
+32.02,Travis,Dermott,22,Toronto Maple Leafs,D,3,22,4,4,123,107
+31.97,Tony,DeAngelo,23,New York Rangers,D,4,18,7,1,141,73
+31.96,Jakob,Chychrun,20,Arizona Coyotes,D,6,14,5,-9,131,89
+31.79,Brian,Dumoulin,27,Pittsburgh Penguins,D,5,18,2,12,110,124
+31.74,Markus,Nutivaara,24,Columbus Blue Jackets,D,7,20,3,3,123,69
+31.69,Brenden,Dillon,28,San Jose Sharks,D,4,13,1,3,89,186
+31.58,Dion,Phaneuf,33,Los Angeles Kings,D,2,14,4,-17,118,157
+31.46,Calvin,de Haan,27,Carolina Hurricanes,D,4,15,2,7,121,137
+31.45,Noah,Juulsen,21,Montreal Canadiens,D,3,12,1,2,107,184
+31.1,John,Moore,28,Boston Bruins,D,5,13,3,2,129,115
+30.61,Justin,Braun,31,San Jose Sharks,D,4,17,1,-2,108,140
+30.33,Mark,Borowiecki,29,Ottawa Senators,D,0,6,0,-2,81,272
+29.56,Marc-Edouard,Vlasic,31,San Jose Sharks,D,6,21,3,-10,150,32
+29.15,Kevin,Connauton,28,Arizona Coyotes,D,4,13,0,0,128,133
+28.7,Adam,Pelech,24,New York Islanders,D,4,17,2,8,112,112
+28.69,Dylan,DeMelo,25,Ottawa Senators,D,4,18,3,12,106,106
+28.67,Alexander,Petrovic,26,Florida Panthers,D,2,13,1,-2,92,182
+28.48,Anton,Stralman,32,Tampa Bay Lightning,D,5,18,3,6,99,98
+27.9,Nick,Holden,31,Vegas Golden Knights,D,5,14,0,-4,91,140
+27.8,Jack,Johnson,31,Pittsburgh Penguins,D,3,12,2,-12,98,153
+27.62,Ian,Cole,29,Colorado Avalanche,D,4,19,1,15,98,114
+27.62,Derrick,Pouliot,24,Vancouver Canucks,D,4,16,5,1,100,97
+27.46,Brett,Pesce,24,Carolina Hurricanes,D,7,15,3,5,111,65
+27.45,Erik,Gudbranson,26,Vancouver Canucks,D,3,10,0,-14,94,177
+26.96,Zdeno,Chara,41,Boston Bruins,D,5,11,1,9,116,114
+26.66,Justin,Schultz,28,Pittsburgh Penguins,D,4,22,8,2,102,38
+26.62,Ben,Chiarot,27,Winnipeg Jets,D,4,13,0,2,91,146
+26.08,Jordan,Oesterle,26,Arizona Coyotes,D,4,16,4,-2,115,76
+26.0,Brandon,Manning,28,Chicago Blackhawks,D,4,11,1,-9,106,128
+25.65,Matt,Grzelcyk,24,Boston Bruins,D,3,19,6,3,109,63
+25.64,Troy,Stecher,24,Vancouver Canucks,D,2,17,1,6,118,112
+25.61,Marco,Scandella,28,Buffalo Sabres,D,5,15,1,-5,119,81
+25.31,Dan,Girardi,34,Tampa Bay Lightning,D,3,13,0,4,84,154
+25.27,Jonas,Brodin,25,Minnesota Wild,D,7,16,2,2,108,51
+25.25,Nikita,Zaitsev,27,Toronto Maple Leafs,D,2,15,2,2,82,145
+24.75,Derek,Forbort,26,Los Angeles Kings,D,2,17,1,2,90,131
+24.71,Ryan,Murray,25,Columbus Blue Jackets,D,4,24,3,13,93,56
+24.33,Steven,Santini,23,New Jersey Devils,D,2,10,1,-2,93,156
+24.3,Michal,Kempny,28,Washington Capitals,D,4,14,0,15,122,91
+24.1,Brad,Hunt,30,Vegas Golden Knights,D,3,17,9,0,114,32
+23.86,Roman,Polak,32,Dallas Stars,D,1,7,0,3,81,197
+23.74,Jason,Demers,30,Arizona Coyotes,D,5,14,2,-1,101,79
+23.67,Travis,Hamonic,28,Calgary Flames,D,4,13,0,-1,124,88
+23.63,Alex,Biega,30,Vancouver Canucks,D,0,10,1,-1,103,166
+23.02,Mike,Reilly,25,Montreal Canadiens,D,4,15,4,-1,109,59
+22.97,Stephen,Johns,26,Dallas Stars,D,4,8,0,0,89,138
+22.62,Thomas,Hickey,29,New York Islanders,D,3,16,1,7,101,93
+22.61,Travis,Sanheim,22,Philadelphia Flyers,D,3,17,3,0,124,52
+22.55,Nathan,Beaulieu,26,Buffalo Sabres,D,6,14,2,3,87,69
+22.49,MacKenzie,Weegar,24,Florida Panthers,D,2,10,0,-1,101,139
+22.37,Gustav,Forsling,22,Chicago Blackhawks,D,4,15,3,-5,125,45
+21.69,Greg,Pateryn,28,Minnesota Wild,D,1,11,0,0,93,148
+21.47,Oscar,Fantenberg,27,Los Angeles Kings,D,2,12,3,-5,89,111
+21.34,Braydon,Coburn,33,Tampa Bay Lightning,D,4,12,0,1,103,92
+21.02,Joe,Morrow,26,Winnipeg Jets,D,3,10,2,-1,109,91
+20.64,Brandon,Carlo,22,Boston Bruins,D,4,10,1,3,87,103
+20.61,Kevan,Miller,31,Boston Bruins,D,2,12,0,12,67,146
+20.6,Christian,Folin,27,Philadelphia Flyers,D,1,10,0,9,70,165
+20.49,Brendan,Smith,29,New York Rangers,D,3,12,0,-4,95,105
+20.49,Danny,DeKeyser,28,Detroit Red Wings,D,5,13,0,1,78,91
+20.45,Mark,Pysyk,26,Florida Panthers,D,4,13,0,0,88,94
+20.35,Nick,Jensen,28,Detroit Red Wings,D,4,14,0,-3,99,78
+20.12,Jordie,Benn,31,Montreal Canadiens,D,3,11,0,2,88,113
+19.89,Trevor,van Riemsdyk,27,Carolina Hurricanes,D,6,14,1,3,103,37
+19.85,Jan,Rutta,28,Chicago Blackhawks,D,5,16,2,-1,92,44
+19.79,Michael,Stone,28,Calgary Flames,D,2,14,2,-1,84,99
+19.51,Connor,Carrick,24,Dallas Stars,D,5,12,2,-3,90,61
+19.37,Kris,Russell,31,Edmonton Oilers,D,3,15,0,3,82,94
+19.29,Fredrik,Claesson,26,New York Rangers,D,2,7,0,1,73,151
+19.07,Andreas,Borgman,23,Toronto Maple Leafs,D,2,10,2,0,66,128
+19.06,Nate,Schmidt,27,Vegas Golden Knights,D,3,18,5,6,82,42
+18.81,Jake,Dotchin,24,Anaheim Ducks,D,2,12,1,3,72,118
+18.52,Patrik,Nemeth,26,Colorado Avalanche,D,3,12,0,4,82,100
+18.46,Ron,Hainsey,37,Toronto Maple Leafs,D,3,16,0,14,71,92
+18.34,Luke,Schenn,29,Anaheim Ducks,D,0,5,0,-9,60,190
+18.27,Connor,Murphy,25,Chicago Blackhawks,D,3,11,1,1,77,100
+17.94,Deryk,Engelland,36,Vegas Golden Knights,D,1,10,0,-1,90,122
+17.79,Chad,Ruhwedel,28,Pittsburgh Penguins,D,2,8,0,-5,96,111
+17.36,Xavier,Ouellet,25,Montreal Canadiens,D,2,11,0,-3,106,84
+17.2,Niklas,Kronwall,37,Detroit Red Wings,D,0,16,4,-1,71,91
+16.41,Casey,Nelson,26,Buffalo Sabres,D,3,13,0,5,90,69
+16.3,Marc,Staal,31,New York Rangers,D,3,10,0,-1,76,95
+16.24,Brandon,Davidson,27,Chicago Blackhawks,D,3,7,0,-2,74,110
+16.01,Slater,Koekkoek,24,Tampa Bay Lightning,D,4,8,1,0,91,67
+15.83,Haydn,Fleury,22,Carolina Hurricanes,D,2,10,1,1,86,87
+15.61,Brooks,Orpik,38,Washington Capitals,D,1,5,0,0,42,170
+15.51,Ben,Lovejoy,34,New Jersey Devils,D,1,7,0,9,92,112
+15.32,Tim,Heed,27,San Jose Sharks,D,3,13,4,0,99,22
+15.09,Robert,Bortuzzo,29,St. Louis Blues,D,3,6,0,0,67,111
+14.86,Scott,Harrington,25,Columbus Blue Jackets,D,3,12,0,4,72,77
+14.78,Madison,Bowey,23,Washington Capitals,D,0,16,2,0,78,77
+14.29,Joakim,Ryan,25,San Jose Sharks,D,2,13,1,4,94,52
+14.23,Matt,Irwin,31,Nashville Predators,D,1,9,0,5,77,106
+14.07,John,Gilmour,25,New York Rangers,D,2,7,1,-1,116,56
+14.0,Nick,Seeler,25,Minnesota Wild,D,1,11,1,4,84,81
+13.96,Trevor,Daley,35,Detroit Red Wings,D,4,12,0,1,96,33
+13.63,David,Schlemko,31,Montreal Canadiens,D,1,10,3,-3,84,68
+13.5,Karl,Alzner,30,Montreal Canadiens,D,2,9,0,2,61,102
+13.29,Steven,Kampfer,30,Boston Bruins,D,0,4,1,-6,78,125
+13.09,Eric,Gryba,30,New Jersey Devils,D,0,5,0,1,54,149
+12.8,Mirco,Mueller,23,New Jersey Devils,D,2,13,0,-3,70,69
+12.54,Andrew,MacDonald,32,Philadelphia Flyers,D,2,15,0,0,79,49
+12.51,Christian,Djoos,24,Washington Capitals,D,2,14,2,10,80,38
+12.48,Julius,Honka,23,Dallas Stars,D,2,11,1,0,96,43
+12.1,Marcus,Pettersson,22,Anaheim Ducks,D,1,14,1,4,69,65
+11.85,Mark,Barberio,28,Colorado Avalanche,D,3,10,2,-4,74,43
+11.69,Yannick,Weber,30,Nashville Predators,D,2,6,0,6,78,83
+11.4,Andy,Greene,36,New Jersey Devils,D,0,9,0,-3,85,86
+11.39,Dmitry,Kulikov,28,Winnipeg Jets,D,2,9,1,0,59,78
+11.34,Luca,Sbisa,28,New York Islanders,D,0,10,1,-2,62,96
+11.34,Ian,McCoshen,23,Florida Panthers,D,2,6,0,0,54,103
+11.17,Andrej,Sekera,32,Edmonton Oilers,D,2,11,3,0,67,45
+10.98,Jonathan,Ericsson,34,Detroit Red Wings,D,1,6,0,1,61,106
+10.7,Jay,Bouwmeester,35,St. Louis Blues,D,1,9,0,-9,88,64
+10.59,Adam,McQuaid,32,New York Rangers,D,0,6,0,0,49,127
+10.37,Victor,Mete,20,Montreal Canadiens,D,2,14,2,8,82,17
+9.62,Anthony,Bitetto,28,Nashville Predators,D,0,9,0,1,53,101
+9.32,Ben,Harpur,23,Ottawa Senators,D,1,4,0,3,55,106
+9.26,Christopher,Tanev,29,Vancouver Canucks,D,2,12,0,-8,69,43
+9.1,Sebastian,Aho,22,New York Islanders,D,2,9,2,-1,75,35
+9.03,Marc,Methot,33,Dallas Stars,D,0,4,0,0,44,127
+8.93,Kurtis,MacDermid,24,Los Angeles Kings,D,0,6,0,-1,43,118
+8.79,Brett,Kulak,24,Montreal Canadiens,D,2,8,0,3,74,52
+8.65,Jon,Merrill,26,Vegas Golden Knights,D,1,7,0,0,68,74
+8.23,Niklas,Hjalmarsson,31,Arizona Coyotes,D,2,11,0,9,61,46
+8.23,Jakub,Jerabek,27,St. Louis Blues,D,1,9,0,-3,61,68
+7.89,Matt,Hunwick,33,Buffalo Sabres,D,1,7,0,-2,62,73
+7.76,Ryan,Murphy,25,Minnesota Wild,D,2,9,2,0,73,25
+7.22,Dan,Hamhuis,36,Nashville Predators,D,0,12,0,2,53,66
+7.11,Anton,Lindholm,24,Colorado Avalanche,D,0,5,0,-1,36,113
+6.13,Andrej,Sustr,28,Anaheim Ducks,D,3,8,0,0,63,26
+5.28,Tucker,Poolman,25,Winnipeg Jets,D,1,5,0,1,68,53
+4.23,Gustav,Olofsson,24,Montreal Canadiens,D,1,10,1,1,42,39
+4.04,Rob,O'Gara,25,New York Rangers,D,0,5,0,0,45,77
+4.03,Carl,Gunnarsson,32,St. Louis Blues,D,2,4,0,4,55,46
+0.0,Nate,Prosser,32,Minnesota Wild,D,0,4,0,0,30,60

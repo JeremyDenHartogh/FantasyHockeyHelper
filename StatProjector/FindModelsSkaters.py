@@ -165,17 +165,16 @@ def train_bpg():
 	#0.874
 
 def train_AModel():
-	#X = arrayX[:,[4,14,29,64,66]]
-	#0.663
+	#X = arrayX[:,[22,61,69]]
+	#0.791
 
-	#indexs = [64,66]
+	indexs = [91]
 	#indexs = [4,6,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,51,53,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93]
-	indexs = [39]
 	for j in range (0,len(indexs)):
 		print (indexs[j])
-		X = arrayX[:,[4,14,17,29,61,63,73]]
-		Y = arrayY[:,17]
-		train_model(X,Y,2000,0.0)
+		X = arrayX[:,[22,61,69]]
+		Y = arrayY[:,22]
+		train_model(X,Y,200,0.792)
 	#0.6629/0.6633
 
 url = "Skaters20132016C.csv"
@@ -205,18 +204,18 @@ arrayX =  np.concatenate((arrayX1, arrayX2), axis=0)
 arrayY = np.concatenate((array1617, array1718), axis=0)
 LR = linear_model.LinearRegression()
 RR = linear_model.Ridge(alpha = .5)
-clf = svm.SVR()
+SVR = svm.SVR()
 #train_goals()
-train_gpg()
+#train_gpg()
 #train_assists()
-train_apg()
+#train_apg()
 #train_powerplaypoints()
-train_pppg()
-train_plusminus()
+#train_pppg()
+#train_plusminus()
 #train_shots()
-train_spg()
+#train_spg()
 #train_hits()
-train_hpg()
+#train_hpg()
 #train_blocks()
-train_bpg()
-#train_AModel()
+#train_bpg()
+train_AModel()

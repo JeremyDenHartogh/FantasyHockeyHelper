@@ -24,6 +24,9 @@ def createCSV()
         end
         csvArray.append(blankArray) 
     end
+    blankArray = Array.new((@endDate-@startDate).to_i + 2, 0)
+    blankArray[0] = "N/A"
+    csvArray.append(blankArray) 
     return csvArray
 end
 

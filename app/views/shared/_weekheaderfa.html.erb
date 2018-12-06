@@ -1,0 +1,26 @@
+<%= javascript_include_tag "cookies" %>
+
+<% if  @playoffStartWeek >= 1 %>
+    <h4> Playoff weeks: <%= @playoffStartWeek %> -  <%= @playoffEndWeek %> </h4>
+<% end %>
+<form action="/freeagents" method="GET" class="homeForm" id="pos">
+    <input type="hidden" name="leagueid" value="" id="wsubmitID">
+    <input type="hidden" name="state" value="" id='wState'>
+    <input type="hidden" name="week" value="" id='wWeek'>
+    <input type="hidden" name="" value="" id='wStart'>
+    <input type="hidden" name="" value="" id='wEnd'>
+    <input type="hidden" name="token" value="" id='wToken'>
+    <input type="submit" value="Current Week"  class="submitButton" onclick="setWeekFA('<%= @currWeek[0]%>');">
+    <% for week in @weeks %>
+        <% if week[0].to_i >= @playoffStartWeek and week[0].to_i <= @playoffEndWeek %>
+            <input type="submit" value="<%= week[0] %>" class="submitButtonP" onclick="setWeekFA('<%= week[0]%>');">
+        <% elsif week[0].to_i >= @playoffEndWeek and @playoffEndWeek >= 1 %>
+            <input type="submit" value="<%= week[0] %>" class="submitButtonN" onclick="setWeekFA('<%= week[0]%>');">
+        <% else %>
+            <input type="submit" value="<%= week[0] %>" class="submitButton" onclick="setWeekFA('<%= week[0]%>');">
+        <% end %>    <% end %>
+</form>
+        
+<script>
+    document.getElementById("pos").action = window.location.pathname;
+</script>

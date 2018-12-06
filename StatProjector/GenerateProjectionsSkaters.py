@@ -4,7 +4,8 @@ import numpy as np
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
 from sklearn import model_selection
-from sklearn import linear_model
+from sklearn import datasets, linear_model
+from sklearn import svm
 
 def train_goals():
     xP = arrayX[:,[4,6,10,19,57,61,73,88]]
@@ -208,8 +209,8 @@ arrayX =  np.concatenate((arrayX1, arrayX2), axis=0)
 arrayY = np.concatenate((array1617, array1718), axis=0)
 arrayP =  np.concatenate((array1718A, array1518P), axis=1)
 
-LR = linear_model.LinearRegression()
-
+#LR = linear_model.LinearRegression()
+LR = linear_model.Ridge(alpha = .5)
 
 players = []
 count = 1

@@ -9,12 +9,16 @@
       <%= render 'shared/header' %>
       <div class="page">
         <% if @info %>
+          <h2> Viewing Week Number: <%= @displayWeek[0] %></h2>
+          <h2> Select Week - Current Ongoing Week Number: <%= @currWeek[0] %></h2>
+          <%= render 'shared/weekheaderfa' %>
           <h2> League Name: <%= @info['name'] %></h2>
-          
           <div class="dropRec">
-            <h3 class="dropRec"> Reccomended Player To Pickup If Needed</h2>
-            <p class="dropRec"> If you need a certain position select it below</p>
+            <h3 class="dropRec"> Reccomended Player To Pickup If Needed (Long term)</h2>
             <p class="dropRec"> <%= @position %>: <%= @dropRec %></p>
+            <hr style="height:0px;border:2px solid #000" />
+            <h3 class="dropRec"> Reccomended Player To Pickup If Needed (In displayed week)</h2>
+            <p class="dropRec"> <%= @position %>: <%= @dropRecW %></p>
           </div>
           
           <h3>Available Players Projections - <%= @list %></h3>
@@ -28,19 +32,20 @@
               <th class="data" onclick="sort_table(4,'rankings')">Position</th>
               <th class="data" onclick="sort_table(5,'rankings')">Value</th>
               <th class="data" onclick="sort_table(6,'rankings')">Games this Week</th>
-              <th class="data" onclick="sort_table(7,'rankings')">On Waivers</th>
+              <th class="data" onclick="sort_table(7,'rankings')">Games Left</th>
+              <th class="data" onclick="sort_table(8,'rankings')">On Waivers</th>
               <% if @position && @position != 'G' && @position != 'Full' %>
-                <th class="data" onclick="sort_table(8,'rankings')">Goals</th>
-                <th class="data" onclick="sort_table(9,'rankings')">Assists</th>
-                <th class="data" onclick="sort_table(10,'rankings')">Plus/Minus</th>
-                <th class="data" onclick="sort_table(11,'rankings')">Shots</th>
-                <th class="data" onclick="sort_table(12,'rankings')">Powerplay Points</th>
-                <th class="data" onclick="sort_table(13,'rankings')">Hits</th>   
+                <th class="data" onclick="sort_table(9,'rankings')">Goals</th>
+                <th class="data" onclick="sort_table(10,'rankings')">Assists</th>
+                <th class="data" onclick="sort_table(11,'rankings')">Plus/Minus</th>
+                <th class="data" onclick="sort_table(12,'rankings')">Shots</th>
+                <th class="data" onclick="sort_table(13,'rankings')">Powerplay Points</th>
+                <th class="data" onclick="sort_table(14,'rankings')">Hits</th>   
               <% elsif @position == 'G' %>
-                <th class="data" onclick="sort_table(8,'rankings')">Wins</th>
-                <th class="data" onclick="sort_table(9,'rankings')">Save Percentage</th>
-                <th class="data" onclick="sort_table(10,'rankings')">Goals Against Average</th>
-                <th class="data" onclick="sort_table(11,'rankings')">Shutouts</th>
+                <th class="data" onclick="sort_table(9,'rankings')">Wins</th>
+                <th class="data" onclick="sort_table(10,'rankings')">Save Percentage</th>
+                <th class="data" onclick="sort_table(11,'rankings')">Goals Against Average</th>
+                <th class="data" onclick="sort_table(12,'rankings')">Shutouts</th>
               <% end %>
             </tr>
             <tbody id="rankings">
@@ -54,6 +59,7 @@
                     <td class="tableData"><%= player[0]['display_position'] %></td>
                     <td class="tableData"><%= player[1]['Value'] %></td>
                     <td class="tableData"><%= player[3]%></td>
+                    <td class="tableData"><%= player[5]%></td>
                     <td class="tableData"><%= player[4]%></td>
                     <% if @position != 'G' && @position != 'Full'%>
                       <td class="tableData"><%= player[1]['G'] %></td>
