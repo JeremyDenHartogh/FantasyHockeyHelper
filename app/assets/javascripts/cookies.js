@@ -1,4 +1,4 @@
-//Function: Creates a cookie with the given name, value and expiration date
+//Function: sets initial cookie values for token and nickname
 function setCookie(token,nickname){
     if (!(getCookie("token")) || getCookie("token") == ""){
         createCookie("token",token);
@@ -9,6 +9,7 @@ function setCookie(token,nickname){
     window.location.replace("/");
 }
 
+//Function: Creates a cookie with the given name, value and expiration date
 var createCookie = function(name, value) {
     var expires;
     var date = new Date();
@@ -33,7 +34,7 @@ function getCookie(c_name) {
     return "";
 }
 
-//Function: Erases the cookie value of the username cookie
+//Function: Erases the cookie value of the cookies
 function eraseCookie(){
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "nickname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -46,12 +47,14 @@ function eraseCookie(){
     return true;
 }
 
+//Function: Checks if user is logged in
 function checkLogin(){
     if (getCookie("token") != ""){
         window.location.replace("/");
     }
 }
 
+//Function: Checks if all the required cookie values are there
 function indexCheck(){
     if (!(getCookie("submitid")) || getCookie("submitid") == ""){
         document.getElementById("options").style.display="none";
@@ -72,6 +75,7 @@ function indexCheck(){
     } 
 }
 
+//Function: checks if all the required cookies for home page are there
 function indexCheckHome(){
     if (getCookie("token") != ""){
         var token = getCookie("token")
@@ -81,6 +85,7 @@ function indexCheckHome(){
     }
 }
 
+//Function: Creates cookies for team, then runs indecheck
 function indexCheck_plusTeam(teamKey,draftStatus,playoffStart,playoffEnd){
     createCookie('teamkey',teamKey);
     createCookie('draftStatus',draftStatus);
@@ -89,12 +94,14 @@ function indexCheck_plusTeam(teamKey,draftStatus,playoffStart,playoffEnd){
     indexCheck();
 }
 
+//Function: gets home page info
 function getHomeInfo(){
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("hToken").value = getCookie("token");
     }
 }
 
+//Function: gets league info
 function getLeagueInfo(){
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("lToken").value = getCookie("token");
@@ -104,6 +111,7 @@ function getLeagueInfo(){
     }
 }
 
+//Function: gets roster page info
 function getRosterInfo(){
     if (getCookie("token") && getCookie("token") != ""){
         var token = document.getElementsByClassName("rToken");
@@ -119,6 +127,7 @@ function getRosterInfo(){
     }
 }
 
+//Function: gets free agents page info
 function getFreeAgentInfo(){
     document.cookie = "week=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.getElementById("options").action = '/freeagents';
@@ -142,6 +151,7 @@ function getFreeAgentInfo(){
     }
 }
 
+//Function: gets standings info
 function getStandings(){
     document.getElementById("options").action = '/standings';
     if (getCookie("token") && getCookie("token") != ""){
@@ -152,6 +162,7 @@ function getStandings(){
     }
 }
 
+//Function: gets team info
 function getTeamInfo(){ 
     document.getElementById("options").action = '/roster';
     if (getCookie("token") && getCookie("token") != ""){
@@ -174,6 +185,7 @@ function getTeamInfo(){
     }
 }
 
+//Function: gets team info
 function getTeamInfo2(){ 
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("wToken").value = getCookie("token");
@@ -197,6 +209,7 @@ function getTeamInfo2(){
     }
 }
 
+//Function: gets free agents page info
 function getFreeAgentInfo2(){
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("fToken").value = getCookie("token");
@@ -220,6 +233,7 @@ function getFreeAgentInfo2(){
     }
 }
 
+//Function: gets free agents page info
 function getFreeAgentInfo3(){
     if (getCookie("token") && getCookie("token") != ""){
         document.getElementById("wToken").value = getCookie("token");
@@ -244,26 +258,30 @@ function getFreeAgentInfo3(){
 }
 
 
+//Function: sets position in freeagency
 function setPosition(pos){
     getFreeAgentInfo2();
     document.getElementById("positions").action = "http://www.fantasyhockeyhelper.com/freeagents" + pos;
 }
 
+//Function: sets week in roster
 function setWeek(week){
     createCookie('week',week);
     getTeamInfo2();
 }
 
+//Function: sets week in free agency
 function setWeekFA(week){
     createCookie('week',week);
     getFreeAgentInfo3();
 }
 
-
+//Function: sets position in rankings
 function setDPosition(pos){
     document.getElementById("positions").action = "http://www.fantasyhockeyhelper.com/rankings" + pos;
 }
 
+//Function: sets what league is being viewed
 function setLeague(leagueid){
     createCookie('submitid',leagueid);
     document.getElementById("submitID").value = getCookie("submitid");

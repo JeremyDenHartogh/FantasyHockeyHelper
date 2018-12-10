@@ -8,6 +8,7 @@ require 'date'
 @startDate = Date.new(2018, 10, 3)
 @endDate = Date.new(2019, 4, 6)
 
+# Function: Create CSV initial CSV file
 def createCSV()
     teams = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/teams"))["teams"]
     teams.sort_by!{ |t| t['name'] }
@@ -30,6 +31,7 @@ def createCSV()
     return csvArray
 end
 
+# Function: Fill in CSV file with game info
 def getScheduleInfo()
     csv = createCSV()
     for i in 0..((@endDate-@startDate).to_i)
@@ -69,10 +71,12 @@ def getScheduleInfo()
 end
 
 
+# Function: Convert index to date
 def indexToDate(index)
     return @startDate + index
 end
 
+# Function: Create array of start and end index for each week
 def getWeekData()
     weeks = [["Week Number", "Start Date", "End Date","startIndex","endIndex"]]
     weeks.append(["1","2018-10-03","2018-10-14","1","12"])

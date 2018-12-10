@@ -1,3 +1,6 @@
+# THIS IS NO LONGER USED AS A GENERATION METHOD, WAS LEFT TO DISPLAY A FAILED ATTEMPT AT GENERATING PROJECTIONS WITH RUBY LIBRARY
+
+
 require 'matrix'
 require 'csv'
 require 'ruby_linear_regression'

@@ -1,4 +1,5 @@
 class FreeagentsController < ApplicationController
+  # Function: old function for viewing all FA's, has since been replaced with setFreeAgents, still rendered as view however
   def allFA
     @list = "All"
     begin
@@ -15,54 +16,64 @@ class FreeagentsController < ApplicationController
     end
   end
 
+  # Function: calls setFreeAgents with postion set as center
   def center
     @list = "Center"
     setFreeagents("C")
     render 'allFA'
   end
   
+  # Function: calls setFreeAgents with postion set as defence
+
   def defence
     @list = "Defence"
     setFreeagents("D")
     render 'allFA'
   end  
   
+  # Function: calls setFreeAgents with postion set as left wing
   def leftwing
     @list = "Left Wing"
     setFreeagents("LW")
     render 'allFA'
   end
   
+  # Function: calls setFreeAgents with postion set as right wing
   def rightwing
     @list = "Right Wing"
     setFreeagents("RW")
     render 'allFA'
   end  
-    
+
+  # Function: calls setFreeAgents with postion set as goalie
   def goalie
     @list = "Goalie"
     setFreeagents("G")
     render 'allFA'
   end  
   
+  # Function: calls setFreeAgents with postion set as forward
   def forward
     @list = "Forward"
     setFreeagents("F")
     render 'allFA'
   end
   
+  # Function: calls setFreeAgents with postion set as skater
   def skater
     @list = "Skater"
     setFreeagents("P")
     render 'allFA'
   end  
   
+  # Function: calls setFreeAgents for all combined positions
   def full
     @list = "All"
     setFreeagents("Full")
     render 'allFA'
   end  
   
+  # Function: sets the available players list
   def setFreeagents(position)
     begin
       @position = position
@@ -76,6 +87,7 @@ class FreeagentsController < ApplicationController
       @dropValueW = -1
       @dropRecW = ""
       
+      # Loads week data
       fileName = 'StatProjector/WeeksData.csv'
       csv_text = File.read(Rails.root + fileName)
       @weeks = CSV.parse(csv_text, :headers => true)
@@ -91,7 +103,6 @@ class FreeagentsController < ApplicationController
           break
         end
       end
-      
       if (params[:week])
         @displayWeek = @weeks[params[:week].to_i - 1]
       else
@@ -106,17 +117,20 @@ class FreeagentsController < ApplicationController
       @datesHeader = @dates[0]
       @daysLeft = @displayWeek[4].to_i - currDateIndex + 1
       
+      
+      # loads player CSV file based on position
       if (position == "C" || position == "L" || position == "R")
         fileName = 'StatProjector/' + 'F' + 'Projections.csv'
       else
         fileName = 'StatProjector/' + position + 'Projections.csv'
       end
-      
       csv_text = File.read(Rails.root + fileName)
       @projections = CSV.parse(csv_text, :headers => true)
       
+      # gets players from yahoo
       getPlayers(position,params[:state])
 
+      # sorts players array
       @players.sort! {|a, b| b[1]['Value'].to_f <=> a[1]['Value'].to_f}
       @info = Hash.from_xml(@response.body)['fantasy_content']['league']
     rescue
@@ -125,6 +139,7 @@ class FreeagentsController < ApplicationController
   end
 end
 
+# Function: Determines which week the index belongs to
 def betweenDates(index,week)
   if (index <= week[4].to_i)
     return week
@@ -132,6 +147,7 @@ def betweenDates(index,week)
   return []
 end
 
+# Function: gets list of games played on specified dates range
 def getRange(fInd,lInd,datesCSV)
   returnDates = []
   for row in datesCSV
@@ -147,6 +163,7 @@ def getRange(fInd,lInd,datesCSV)
   return returnDates
 end
 
+# Function: determines if viewed player is best player
 def isBestPlayer(player,stats,gl)
   if stats["Value"].to_f > @dropValue
     @dropValue = stats["Value"].to_f
@@ -158,6 +175,7 @@ def isBestPlayer(player,stats,gl)
   end
 end
 
+# Function: gets schedule info, and best player info
 def getFAInfo(type, array)
   for player in array do
     stats = @projections.find {|row| (row['Last Name'] == player["name"]["last"] && row['First Name'] == player["name"]["first"] && row['Team'] == player["editorial_team_full_name"])}
@@ -185,6 +203,7 @@ def getFAInfo(type, array)
   end
 end
 
+# Function: Get available players list from yahop
 def getPlayers(position,type)
   if type == "postdraft"
     begin

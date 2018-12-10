@@ -1,5 +1,6 @@
 var ascT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
+//Function: sorts table by given column
 function sort_table(col,id){
     var tbody = document.getElementById(id);
     var asc = ascT[col];   

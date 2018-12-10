@@ -7,6 +7,7 @@ from sklearn import model_selection
 from sklearn import datasets, linear_model
 from sklearn import svm
 
+# Functions train_X functions train that specific statistic with the given model to generate projections
 def train_goals():
     xP = arrayX[:,[4,6,10,19,57,61,73,88]]
     yP = arrayY[:,9]
@@ -18,7 +19,6 @@ def train_goals():
         if (predictions[i] < 0):
     	    predictions[i] = 0
         print ("Name: " + str(arrayP[i][0]) + " " + str(arrayP[i][1]) + "   Goals Prediction: " + str((predictions[i]).round().astype(int)))
-
     	
 def train_gpg():
     xP = arrayX[:,[4,6,10,26,57,69,82,88]]
@@ -176,6 +176,7 @@ def train_bpg():
             count +=1
 
 
+# import csv files with data
 url = "Skaters20132016C.csv"
 ds1316 = pandas.read_csv(url)
 url = "Skaters20142017C.csv"
@@ -193,7 +194,6 @@ ds1718A = pandas.read_csv(url)
 url = "Skaters20152018P.csv"
 ds1518P = pandas.read_csv(url)
 
-# Split-out validation dataset
 array1516 = ds1516.values
 array1617 = ds1617.values
 array1718 = ds1718.values
@@ -203,6 +203,7 @@ array1518 = ds1518.values
 array1718A = ds1718A.values
 array1518P = ds1518P.values
 
+# concatenate 1 year and 3 year average arrays
 arrayX1 =  np.concatenate((array1516, array1316), axis=1)
 arrayX2 =  np.concatenate((array1617, array1417), axis=1)
 arrayX =  np.concatenate((arrayX1, arrayX2), axis=0)
@@ -214,6 +215,8 @@ LR = linear_model.Ridge(alpha = .5)
 
 players = []
 count = 1
+
+# appends headers to players list
 players.append(["First Name", "Last Name", "Age", "Position", "PosVal", "ID", "G", "A", "PPP", "+/-", "SOG", "HITS"])
 for i in range (0,len(arrayP)):
     if arrayP[i][0] == 1:
@@ -236,7 +239,8 @@ train_hpg()
 
 #for i in range (0,len(players)):
 #    print (players[i])
-    
+
+# writes players list to csv    
 import csv
 with open("SkaterProjections.csv","w+") as my_csv:
     csvWriter = csv.writer(my_csv,delimiter=',')

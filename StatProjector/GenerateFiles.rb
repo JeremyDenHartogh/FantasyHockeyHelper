@@ -8,6 +8,7 @@ require 'descriptive_statistics'
 @goalie_data = []
 @games_played = {}
 
+# Function: Gets data from csv files
 def getData()
   CSV.foreach("SkaterProjections.csv", :headers => true) do |row|
     @skater_data.push(row)
@@ -18,6 +19,7 @@ def getData()
   end
 end
 
+# Function: Gets the team for each player
 def getTeams()
   for player in @skater_data
     puts player
@@ -45,6 +47,7 @@ def getTeams()
   end
 end  
 
+# Function: Gets how many games a player has already played this season
 def getGamesPlayedArray()
   standings = JSON.parse((RestClient.get "https://statsapi.web.nhl.com/api/v1/standings"))["records"]#[0]["teamRecords"][0]
   for division in standings
@@ -60,6 +63,7 @@ def getGamesPlayedArray()
   @games_played["N/A"] = 82
 end
 
+# Function: Updates projections to account for already played games
 def getMidSeasonStatistics()
   for player in @skater_data
     begin
@@ -103,6 +107,7 @@ def getMidSeasonStatistics()
   end
 end
 
+# Function: Generates a value for a player
 def generateValue()
   for player in @skater_data
     player.push(0)
@@ -128,6 +133,7 @@ def generateValue()
   
 end
 
+# Function: Determines the average value for a given stat
 def getAveragesForStat(index,array,position)
   tempArr = []
   for player in array
@@ -140,6 +146,7 @@ def getAveragesForStat(index,array,position)
   return [tempArr.mean,tempArr.standard_deviation]
 end
 
+# Function: Adds all a players values in each stat together to get total value
 def addStat(array,stats,position,index)
   for player in array
     if player[4] == position
@@ -154,6 +161,7 @@ def addStat(array,stats,position,index)
   end
 end
 
+# Function: Standardize the values for players so they are between 0 to 100
 def standardizeValue()
   minMax = []
   minMax = getMinMax(@skater_data,"0")
@@ -164,6 +172,7 @@ def standardizeValue()
   zero(@goalie_data,"G",minMax)
 end
 
+# Function: Gets lowest and highest value for each position type
 def getMinMax(array,pos)
   minimum = 1000000
   maximum = -1000000
@@ -176,6 +185,7 @@ def getMinMax(array,pos)
   return [minimum,maximum]
 end
 
+# Function: Sets lowest player value to 0, highest to 100, everybody else adjust to fit in between
 def zero(array,pos,minMax)
   for player in array
     if player[4] == pos
@@ -184,6 +194,7 @@ def zero(array,pos,minMax)
   end
 end
 
+# Function: Below functions load player data into lists that will eventually be saved to CSV files
 def loadFullCSV()
   allPlayers = []
   for player in @skater_data
@@ -274,6 +285,7 @@ def loadPositionCSV()
   toCSV("RWProjections.csv",rwPlayers)
 end
 
+# Function: puts player lists into csv files
 def toCSV(fileName,players)
   CSV.open(fileName, "w") do |csv|
     for player in players

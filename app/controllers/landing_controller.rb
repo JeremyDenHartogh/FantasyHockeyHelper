@@ -2,6 +2,7 @@ class LandingController < ApplicationController
   def index
   end
   
+  # Function: Gets leagues a user is apart of
   def home
     begin
       @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=nhl/leagues;season=2018", :authorization => "Bearer #{params[:token]}")

@@ -1,0 +1,30 @@
+<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
+{
+  "name": "Fantasy Hockey Helper",
+  "short_name": "Fantasy Hockey Helper",
+  "start_url": "/",
+  "icons": [{
+      "src": <%= image_path "icons/fhh-128x128.png" %>,
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": <%= image_path "icons/fhh-144x144.png" %>,
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": <%= image_path "icons/fhh-152x152.png" %>,
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": <%= image_path "icons/fhh-192x192.png" %>,
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": <%= image_path "icons/fhh-256x256.png" %>,
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+  "display": "standalone",
+  "background_color": "#FFF",
+  "theme_color": "#7000A2"
+}

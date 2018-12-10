@@ -1,3 +1,4 @@
+<link rel="manifest" href="/manifest.json.erb">
 <html>
   <head>
     <%= stylesheet_link_tag "application" %>
@@ -13,13 +14,13 @@
           <h2> Select Week - Current Ongoing Week Number: <%= @currWeek[0] %></h2>
           <%= render 'shared/weekheader' %>
           <div class="dropRec">
-            <h3 class="dropRec"> Reccomended Players To Drop If Needed (Long term) </h2>
+            <h3 class="dropRec"> Recommended Players To Drop If Needed (Long term) </h2>
             <p class="dropRec"> Any Position: <%= @dropRec[0] %></p>
             <p class="dropRec"> Forward: <%= @dropRec[1] %></p>
             <p class="dropRec"> Defense: <%= @dropRec[2] %></p>
             <p class="dropRec"> Goalie: <%= @dropRec[3] %></p>
             <hr style="height:0px;border:2px solid #000" />
-            <h3 class="dropRec"> Reccomended Players To Drop If Needed (In displayed week) </h2>
+            <h3 class="dropRec"> Recommended Players To Drop If Needed (In displayed week) </h2>
             <p class="dropRec"> Any Position: <%= @dropRecW[0] %></p>
             <p class="dropRec"> Forward: <%= @dropRecW[1] %></p>
             <p class="dropRec"> Defense: <%= @dropRecW[2] %></p>

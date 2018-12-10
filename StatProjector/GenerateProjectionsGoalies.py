@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn import model_selection
 from sklearn import linear_model
 
+# Functions train_X functions train that specific statistic with the given model to generate projections
 def train_wins():
     xP = arrayX[:,[8]]
     yP = arrayY[:,8]
@@ -50,6 +51,7 @@ def train_shutouts():
     for i in range (0,len(predictions)):
     	print ("Name: " + str(arrayP[i][0]) + " " + str(arrayP[i][1]) + "   Blocks Prediction: " + str(predictions[i].round().astype(int)))
 
+# import csv files with data
 url = "Goalies20132016C.csv"
 ds1316 = pandas.read_csv(url)
 url = "Goalies20142017C.csv"
@@ -67,7 +69,6 @@ ds1718A = pandas.read_csv(url)
 url = "Goalies20152018P.csv"
 ds1518P = pandas.read_csv(url)
 
-# Split-out validation dataset
 array1516 = ds1516.values
 array1617 = ds1617.values
 array1718 = ds1718.values

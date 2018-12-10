@@ -1,4 +1,6 @@
 class LeagueController < ApplicationController
+  
+  # Function: Gets basic league info for selected league
   def info
     begin 
         @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/settings", :authorization => "Bearer #{params[:token]}")
@@ -34,6 +36,7 @@ class LeagueController < ApplicationController
     end
   end
   
+  # Function: Gets standings info for selected league
   def standings
     begin
       @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/league/nhl.l.#{params[:leagueid]}/standings", :authorization => "Bearer #{params[:token]}")
@@ -51,6 +54,7 @@ class LeagueController < ApplicationController
     end
   end
   
+# Function: Gets roster info for users team in selected league
   def roster
     begin
       @response = (RestClient.get "https://fantasysports.yahooapis.com/fantasy/v2/team/#{params[:team]}/roster/", :authorization => "Bearer #{params[:token]}")
@@ -62,6 +66,7 @@ class LeagueController < ApplicationController
       @dropValueW = [1001,1001,1001,1001]
       @dropRecW = ["","","",""]
       
+      # Gets schedule info for roster
       fileName = 'StatProjector/WeeksData.csv'
       csv_text = File.read(Rails.root + fileName)
       @weeks = CSV.parse(csv_text, :headers => true)
@@ -84,7 +89,6 @@ class LeagueController < ApplicationController
       else
         @displayWeek = @currWeek
       end
-      
       fileName = 'StatProjector/Schedule.csv'
       csv_text = File.read(Rails.root + fileName)
       @dates = CSV.parse(csv_text, :headers => false)
@@ -92,6 +96,8 @@ class LeagueController < ApplicationController
       @datesHeader = @dates[0]
       @daysLeft = @displayWeek[4].to_i - currDateIndex + 1
 
+
+      # Gets player projections for players on roster
       fileName = 'StatProjector/FullProjections.csv'
       csv_text = File.read(Rails.root + fileName)
       @projections = CSV.parse(csv_text, :headers => true)
@@ -135,6 +141,7 @@ class LeagueController < ApplicationController
   end
 end
 
+# Function: Gets what week it is based on index
 def betweenDates(index,week)
   if (index <= week[4].to_i)
     return week
@@ -142,6 +149,7 @@ def betweenDates(index,week)
   return []
 end
 
+# Function: Gets dates between selected weeks indexs
 def getRange(fInd,lInd,datesCSV)
   returnDates = []
   for row in datesCSV
@@ -157,6 +165,7 @@ def getRange(fInd,lInd,datesCSV)
   return returnDates
 end
 
+# Function: Gets players with lowest value at each postion
 def isLowestPlayer(player,stats,index,gl)
   if stats["Value"].to_f < @dropValue[index] && player['selected_position']['position'] != "IR" && player['selected_position']['position'] != "IR+" && player['selected_position']['position'] != "NA"
     @dropValue[index] = stats["Value"].to_f

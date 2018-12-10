@@ -7,6 +7,7 @@ from sklearn import model_selection
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score, explained_variance_score
 
+# Function: returns error values for model test
 def getErrorValues(pred,yVal):
 	count = 0
 	diffArray = []
@@ -19,6 +20,7 @@ def getErrorValues(pred,yVal):
 	medianError = statistics.median(diffArray)	
 	return meanError, medianError
 
+# Function: tests accuracy of potential model
 def train_model(X,Y,numTrials,printThreshold):
 	p = len(X[0])
 	meanErrors = []
@@ -52,7 +54,7 @@ def train_model(X,Y,numTrials,printThreshold):
 		print ("Median Median-Error: " + str(statistics.median(medianErrors)))
 
 	
-	
+# Functions below are used to test models for a specific statistic	
 def train_wins():
 	#indexs = [3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,32,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57]
 	indexs = [3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,32,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57]

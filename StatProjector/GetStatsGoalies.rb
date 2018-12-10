@@ -2,6 +2,7 @@ require 'rest-client'
 require 'active_support/core_ext/hash'
 require 'json'
 
+# Function: Gets players stats in request years
 def getGoalieStats(numYears,yearCombo,year1,year2)
   @year1 = year1
   @year2 = year2
@@ -31,6 +32,7 @@ def getGoalieStats(numYears,yearCombo,year1,year2)
   end
 end
 
+# Function: Cuts players from lists that are not in every list
 def goaliesCut(index)
   idHashArray = []
   for i in 0..@goaliesIds.length-1
@@ -46,6 +48,7 @@ def goaliesCut(index)
   end
 end
   
+# Function: converts skaters to new csv file
 def goaliesToCSV(group,yearComboIndex)
   cats = []
   @goalies[0][0].each do |category,catValues|
@@ -79,6 +82,7 @@ def goaliesToCSV(group,yearComboIndex)
   end
 end
 
+# Function: Delete unecessary csv files that were created
 def deleteExtra(saveIndex,yearComboIndex)
   for i in 0..@goalies.length-1
     yn1 = i
